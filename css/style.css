@@ -1833,73 +1833,57 @@ i.icon:before {
   height: 1.6em;
 }
 .highlight {
-  color: #000;
-  background: #fff;
+  color: #bababa;
+  background: #2b2b2b;
 }
-.highlight .code .comment,
-.highlight .code .quote {
-  color: #006a00;
+.highlight .code .strong,
+.highlight .code .emphasis {
+  color: #a8a8a2;
 }
-.highlight .code .keyword,
-.highlight .code .selector-tag,
-.highlight .code .literal {
-  color: #aa0d91;
-}
-.highlight .code .name {
-  color: #008;
-}
-.highlight .code .variable,
-.highlight .code .template-variable {
-  color: #660;
-}
-.highlight .code .string {
-  color: #c41a16;
-}
-.highlight .code .regexp,
-.highlight .code .link {
-  color: #080;
-}
-.highlight .code .title,
-.highlight .code .tag,
-.highlight .code .symbol,
 .highlight .code .bullet,
+.highlight .code .quote,
+.highlight .code .link,
 .highlight .code .number,
-.highlight .code .meta {
-  color: #1c00cf;
+.highlight .code .regexp,
+.highlight .code .literal {
+  color: #6896ba;
 }
-.highlight .code .section,
-.highlight .code .class .title,
-.highlight .code .type,
-.highlight .code .attr,
-.highlight .code .built_in,
-.highlight .code .builtin-name,
-.highlight .code .params {
-  color: #5c2699;
-}
-.highlight .code .attribute,
-.highlight .code .subst {
-  color: #000;
-}
-.highlight .code .formula {
-  background-color: #eee;
-  font-style: italic;
-}
-.highlight .code .addition {
-  background-color: #baeeba;
-}
-.highlight .code .deletion {
-  background-color: #ffc8bd;
-}
-.highlight .code .selector-id,
+.highlight .code .code,
 .highlight .code .selector-class {
-  color: #9b703f;
-}
-.highlight .code .doctag,
-.highlight .code .strong {
-  font-weight: bold;
+  color: #a6e22e;
 }
 .highlight .code .emphasis {
   font-style: italic;
+}
+.highlight .code .keyword,
+.highlight .code .selector-tag,
+.highlight .code .section,
+.highlight .code .attribute,
+.highlight .code .name,
+.highlight .code .variable {
+  color: #cb7832;
+}
+.highlight .code .params {
+  color: #b9b9b9;
+}
+.highlight .code .string,
+.highlight .code .subst,
+.highlight .code .type,
+.highlight .code .built_in,
+.highlight .code .builtin-name,
+.highlight .code .symbol,
+.highlight .code .selector-id,
+.highlight .code .selector-attr,
+.highlight .code .selector-pseudo,
+.highlight .code .template-tag,
+.highlight .code .template-variable,
+.highlight .code .addition {
+  color: #e0c46c;
+}
+.highlight .code .comment,
+.highlight .code .deletion,
+.highlight .code .meta {
+  color: #7f7f7f;
 }
 @media only screen and (min-width: 960px) {
   .nav-container-inner {
