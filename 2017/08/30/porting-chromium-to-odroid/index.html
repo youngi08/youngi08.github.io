@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="Hello">
 <meta property="og:description" content="삽질한 것에 비해 굉장히 간단한 방법으로 할 수 있다. 여기에 몇 일을 날렸는가…ㅠㅠ먼저 원리를 제대로 이해하고 했으면 삽질이라고 할 수도 없을 만큼 빠른 시간 안에 할 수 있었을 것이다. 방향을 이상하게 잡아서 삽질하다 보니 굉장히 오래 걸리게 되었다. odroid xu3 보드에 크로미움을 포팅하기 위해서는 arm 32bit용으로 컴파일 해야 한다.  H">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-08-31T07:18:46.000Z">
+<meta property="og:updated_time" content="2017-08-31T07:20:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="odroid에 구글 크로미움 포팅하기">
 <meta name="twitter:description" content="삽질한 것에 비해 굉장히 간단한 방법으로 할 수 있다. 여기에 몇 일을 날렸는가…ㅠㅠ먼저 원리를 제대로 이해하고 했으면 삽질이라고 할 수도 없을 만큼 빠른 시간 안에 할 수 있었을 것이다. 방향을 이상하게 잡아서 삽질하다 보니 굉장히 오래 걸리게 되었다. odroid xu3 보드에 크로미움을 포팅하기 위해서는 arm 32bit용으로 컴파일 해야 한다.  H">
@@ -180,7 +180,7 @@
 </ol>
 <p>크로미움 코드를 다운로드 하기 위한 과정은 같다.<br>(1) depot_tools 설치<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://chromium.googlesource.com/chromium/tools/depot_tools</div><div class="line">$ <span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:~/chromium/depot_tools</div></pre></td></tr></table></figure></p>
 <p>(2) 크로미움 코드 다운로드<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ mkdir chromium &amp;&amp; <span class="built_in">cd</span> ~/chromium</div><div class="line">$ fetch --nohooks chromium</div></pre></td></tr></table></figure></p>
-<p>(3)ARM용 컴파일<br><a href="https://www.olimex.com/forum/index.php?topic=4109.0" target="_blank" rel="external">https://www.olimex.com/forum/index.php?topic=4109.0</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"> ./build/install-build-deps.sh --arm &amp;&amp;</div><div class="line">gclient sync &amp;&amp;</div><div class="line">GYP_CROSSCOMPILE=1 GYP_DEFINES=<span class="string">"target_arch=arm arm_float_abi=hard component=shared_library linux_use_gold_flags=1"</span> gclient runhooks &amp;&amp;</div><div class="line">ninja -C out/Release chrome</div></pre></td></tr></table></figure></p>
+<p>(3)ARM용 컴파일<br><a href="https://www.olimex.com/forum/index.php?topic=4109.0" target="_blank" rel="external">https://www.olimex.com/forum/index.php?topic=4109.0</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">./build/install-build-deps.sh --arm &amp;&amp;</div><div class="line">gclient sync &amp;&amp;</div><div class="line">GYP_CROSSCOMPILE=1 GYP_DEFINES=<span class="string">"target_arch=arm arm_float_abi=hard component=shared_library linux_use_gold_flags=1"</span> gclient runhooks &amp;&amp;</div><div class="line">ninja -C out/Release chrome</div></pre></td></tr></table></figure></p>
 
         </div>
         <footer class="article-footer">
@@ -188,7 +188,7 @@
 
 
 
-    <a data-url="https://youngi08.github.io/2017/08/30/porting-chromium-to-odroid/" data-id="cj704ecm7000affwrhkpf2bas" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://youngi08.github.io/2017/08/30/porting-chromium-to-odroid/" data-id="cj704f8ws000aguwr0k4z202a" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
