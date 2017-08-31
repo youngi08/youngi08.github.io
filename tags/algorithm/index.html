@@ -3,24 +3,17 @@
 <head>
     <meta charset="utf-8">
     
-    <title>odroid에 구글 크로미움 포팅하기 | Hello</title>
+    <title>Tag: algorithm | Hello</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="chromium,odroid" />
-    
-    <meta name="description" content="삽질한 것에 비해 굉장히 간단한 방법으로 할 수 있다. 여기에 몇 일을 날렸는가…ㅠㅠ먼저 원리를 제대로 이해하고 했으면 삽질이라고 할 수도 없을 만큼 빠른 시간 안에 할 수 있었을 것이다. 방향을 이상하게 잡아서 삽질하다 보니 굉장히 오래 걸리게 되었다. odroid xu3 보드에 크로미움을 포팅하기 위해서는 arm 32bit용으로 컴파일 해야 한다.  H">
-<meta name="keywords" content="chromium,odroid">
-<meta property="og:type" content="article">
-<meta property="og:title" content="odroid에 구글 크로미움 포팅하기">
-<meta property="og:url" content="https://youngi08.github.io/2017/08/31/porting-chromium-to-odroid/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Hello">
+<meta property="og:url" content="https://youngi08.github.io/tags/algorithm/index.html">
 <meta property="og:site_name" content="Hello">
-<meta property="og:description" content="삽질한 것에 비해 굉장히 간단한 방법으로 할 수 있다. 여기에 몇 일을 날렸는가…ㅠㅠ먼저 원리를 제대로 이해하고 했으면 삽질이라고 할 수도 없을 만큼 빠른 시간 안에 할 수 있었을 것이다. 방향을 이상하게 잡아서 삽질하다 보니 굉장히 오래 걸리게 되었다. odroid xu3 보드에 크로미움을 포팅하기 위해서는 arm 32bit용으로 컴파일 해야 한다.  H">
 <meta property="og:locale" content="ko-KR">
-<meta property="og:updated_time" content="2017-08-31T02:29:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="odroid에 구글 크로미움 포팅하기">
-<meta name="twitter:description" content="삽질한 것에 비해 굉장히 간단한 방법으로 할 수 있다. 여기에 몇 일을 날렸는가…ㅠㅠ먼저 원리를 제대로 이해하고 했으면 삽질이라고 할 수도 없을 만큼 빠른 시간 안에 할 수 있었을 것이다. 방향을 이상하게 잡아서 삽질하다 보니 굉장히 오래 걸리게 되었다. odroid xu3 보드에 크로미움을 포팅하기 위해서는 arm 32bit용으로 컴파일 해야 한다.  H">
+<meta name="twitter:title" content="Hello">
     
 
     
@@ -134,162 +127,183 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/odroid/">odroid</a>
+    <i class="icon fa fa-tag"></i>Tag: <em>algorithm</em>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-porting-chromium-to-odroid" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
+                            
+
+    
+    
         
-            <header class="article-header">
-                
+        
+        <section class="archives-wrap">
+            <div class="archive-year-wrap">
+                <a href="/archives/2017" class="archive-year"><i class="icon fa fa-calendar-o"></i>2017</a>
+            </div>
+            <div class="archives">
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/algorithm/">algorithm</a>
+            </div>
+            <div class="date"><time datetime="2017-08-31T06:08:32.000Z" itemprop="datePublished">2017-08-31</time></div>
+        </div>
+        
     
         <h1 class="article-title" itemprop="name">
-        odroid에 구글 크로미움 포팅하기
+        <a href="/2017/08/31/selection-sort/">알고리즘 | 선택정렬</a>
         </h1>
     
 
-            </header>
-        
-        
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <a href="/2017/08/31/porting-chromium-to-odroid/" class="article-date">
-            <time datetime="2017-08-30T19:13:16.000Z" itemprop="datePublished">2017-08-31</time>
-        </a>
-    </div>
+        <p class="article-excerpt">
+            선택 정렬(Selection Sort)
 
-                
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/chromium/">chromium</a>, <a class="tag-link" href="/tags/odroid/">odroid</a>
-    </div>
-
-            </div>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            <p>삽질한 것에 비해 굉장히 간단한 방법으로 할 수 있다. 여기에 몇 일을 날렸는가…ㅠㅠ<br>먼저 원리를 제대로 이해하고 했으면 삽질이라고 할 수도 없을 만큼 빠른 시간 안에 할 수 있었을 것이다. 방향을 이상하게 잡아서 삽질하다 보니 굉장히 오래 걸리게 되었다.</p>
-<p>odroid xu3 보드에 크로미움을 포팅하기 위해서는 arm 32bit용으로 컴파일 해야 한다.</p>
-<ol>
-<li><p>Hardkernel 사이트에서 크로스컴파일을 위한 툴체인, 환경을 세팅한다. 내 보드는 xu3이다.<br><a href="http://odroid.com/dokuwiki/doku.php?id=en:xu3_building_kernel" target="_blank" rel="external">http://odroid.com/dokuwiki/doku.php?id=en:xu3_building_kernel</a></p>
-</li>
-<li><p>크로미움 크로스컴파일 하기<br><a href="http://unix.stackexchange.com/questions/176794/how-do-i-cross-compile-chromium-for-arm" target="_blank" rel="external">http://unix.stackexchange.com/questions/176794/how-do-i-cross-compile-chromium-for-arm</a><br>위 사이트 참조!</p>
-</li>
-</ol>
-<p>크로미움 코드를 다운로드 하기 위한 과정은 같다.<br>(1) depot_tools 설치<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://chromium.googlesource.com/chromium/tools/depot_tools</div><div class="line">$ <span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:~/chromium/depot_tools</div></pre></td></tr></table></figure></p>
-<p>(2) 크로미움 코드 다운로드<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ mkdir chromium &amp;&amp; <span class="built_in">cd</span> ~/chromium</div><div class="line">$ fetch --nohooks chromium</div></pre></td></tr></table></figure></p>
-<p>(3)ARM용 컴파일<br><a href="https://www.olimex.com/forum/index.php?topic=4109.0" target="_blank" rel="external">https://www.olimex.com/forum/index.php?topic=4109.0</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"> ./build/install-build-deps.sh --arm &amp;&amp;</div><div class="line">gclient sync &amp;&amp;</div><div class="line">GYP_CROSSCOMPILE=1 GYP_DEFINES=<span class="string">"target_arch=arm arm_float_abi=hard component=shared_library linux_use_gold_flags=1"</span> gclient runhooks &amp;&amp;</div><div class="line">ninja -C out/Release chrome</div></pre></td></tr></table></figure></p>
-
-        </div>
-        <footer class="article-footer">
-            
-
-
-
-    <a data-url="https://youngi08.github.io/2017/08/31/porting-chromium-to-odroid/" data-id="cj70405l700065pwr66k5gukr" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-        </footer>
+정렬 되지 않은 데이터들에 대해 가장 작은 데이터를 찾아 가장 앞의 데이터와 교환해나가는 방식
+선택 정렬의 비교 횟수= (n-1) + (n-2) + (n-3) + … + 1= n(n-1)/2
+시간 복잡도
+평균, 최악, 최고: O(n^2)
+기존의 레코드들이 정렬이 되어 있던, 되어 있지 않던 상관 없이 레코드들의 가장
+        </p>
     </div>
 </article>
-
-    <section id="comments">
     
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
         
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/algorithm/">algorithm</a>
+            </div>
+            <div class="date"><time datetime="2017-08-31T05:41:31.000Z" itemprop="datePublished">2017-08-31</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/08/31/insert-sort/">알고리즘 | 삽입정렬</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            삽입정렬(Insert Sort)
+
+데이터 집합을 순회하면서 정렬이 필요한 요소를 뽑아내어 이를 다시 적당한 곳에 삽입해 나가는 알고리즘
+아직 정렬 되지 않은 임의의 데이터를 이미 정렬 된 부분의 적절한 위치에 삽입해가며 정렬하는 방식
+
+시간 복잡도
+
+최선
+list가 이미 정렬 되어 있는 경우에는 외부 루프 n-1번만 실행되고 각 단계에서 데이터의 이동 없이
+        </p>
     </div>
+</article>
+    
+        </div>
+    
 
     
-    </section>
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/algorithm/">algorithm</a>
+            </div>
+            <div class="date"><time datetime="2017-08-31T04:01:03.000Z" itemprop="datePublished">2017-08-31</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/08/31/bubbule-sort/">알고리즘 | 버블정렬</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            버블정렬(Bubble Sort)
+
+데이터 집합을 순회하면서 집합 내의 이웃 요소들끼리의 교환을 통해 정렬을 수행
+제일 큰 원소를 오른쪽으로 옮기는 방법
+버블 정렬의 비교 횟수= (n-1)+(n-2)+…+(n-(n-2))+(n-(n-1))= (n-1)+(n-2)+…+3+2+1 = (n-1)(n/2)비교횟수 T(n)= (n(n-1))/2
+시간복잡도
+평균, 최악
+        </p>
+    </div>
+</article>
+    
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/algorithm/">algorithm</a>
+            </div>
+            <div class="date"><time datetime="2017-08-31T03:53:59.000Z" itemprop="datePublished">2017-08-31</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/08/31/algorithm-start/">알고리즘 | start</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            Categories
+
+알고리즘 | 개념
+자료구조의 분류
+
+선형구조: 선형리스트(배열), 연결 리스트, 스택, 큐, 데크
+비선형 구조: 트리, 그래프
+
+
+정렬(Sorting)
+
+알고리즘 | 정렬 시간복잡도
+내부 정렬
+소량의 데이터를 주기억장치에만 기억시켜서 정렬하는 방식
+알고리즘 | 버블정렬
+알고리즘 | 삽입정렬
+알고리즘 | 선택정렬
+알고리즘 | 퀵정렬
+알고
+        </p>
+    </div>
+</article>
+    
+        </div>
+    
+
+
+    </div></section>
+
 
 
                         </div>
                     </section>
                     <aside id="sidebar">
     <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
-    
-        
-<nav id="article-nav">
-    
-        <a href="/2017/08/31/algorithm-start/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            알고리즘 | start
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
-    
-    
-        <a href="/2017/08/31/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Hello World</p>
-        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
-        </a>
-    
-</nav>
-
     
     <div class="widgets-container">
         
@@ -443,13 +457,11 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://youngi08.github.io/2017/08/31/porting-chromium-to-odroid/';
-    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
