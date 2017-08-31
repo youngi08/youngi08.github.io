@@ -1132,6 +1132,7 @@ a.article-title:hover {
 .article-entry h6 {
   line-height: 1.3em;
   margin: 1.3em 0;
+  margin-bottom: 0px;
 }
 .article-entry a {
   color: #666;
@@ -1143,7 +1144,7 @@ a.article-title:hover {
 .article-entry ul,
 .article-entry ol,
 .article-entry dl {
-  margin-top: 1.6em;
+  margin-top: 0px;
   margin-bottom: 1.6em;
   list-style-position: outside;
   padding-left: 1.4em;
@@ -1806,6 +1807,9 @@ i.icon:before {
   font-size: 14px;
   font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
   line-height: 22.400000000000002px;
+  margin-top: 0px;
+  padding-top: 5px;
+  padding-left: 10px;
 }
 .highlight table {
   margin: 0;
