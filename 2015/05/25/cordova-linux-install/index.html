@@ -3,23 +3,23 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Tizen | print-service not found 에러 | Hello</title>
+    <title>Cordova | Linux에서 Cordova 개발환경 설치 | Hello</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="" />
     
-    <meta name="description" content="Tizen 코드를 repo sync로 받는데 중간에 에러가 나길래 repo sync -f로 강제로 받았는데 계속 같은 에러를 내뿜으면서 다운이 실패하였다. error: in sync -f: revision tizen in apps/core/preloaded/print-service not found print-service폴더는 있는데 안에 내용물이 없다.">
+    <meta name="description" content="Cordova Documentation:  http://cordova.apache.org/docs/en/3.3.0/guide_cli_index.md.html#The%20Command-Line%20Interface  Android studio 설치https://developer.android.com/sdk/index.html   npm과 nodejs설치 12">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Tizen | print-service not found 에러">
-<meta property="og:url" content="https://youngi08.github.io/2015/09/22/tizen-print-service-not-found-error/index.html">
+<meta property="og:title" content="Cordova | Linux에서 Cordova 개발환경 설치">
+<meta property="og:url" content="https://youngi08.github.io/2015/05/25/cordova-linux-install/index.html">
 <meta property="og:site_name" content="Hello">
-<meta property="og:description" content="Tizen 코드를 repo sync로 받는데 중간에 에러가 나길래 repo sync -f로 강제로 받았는데 계속 같은 에러를 내뿜으면서 다운이 실패하였다. error: in sync -f: revision tizen in apps/core/preloaded/print-service not found print-service폴더는 있는데 안에 내용물이 없다.">
+<meta property="og:description" content="Cordova Documentation:  http://cordova.apache.org/docs/en/3.3.0/guide_cli_index.md.html#The%20Command-Line%20Interface  Android studio 설치https://developer.android.com/sdk/index.html   npm과 nodejs설치 12">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-09-04T02:31:33.000Z">
+<meta property="og:updated_time" content="2017-09-04T02:40:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tizen | print-service not found 에러">
-<meta name="twitter:description" content="Tizen 코드를 repo sync로 받는데 중간에 에러가 나길래 repo sync -f로 강제로 받았는데 계속 같은 에러를 내뿜으면서 다운이 실패하였다. error: in sync -f: revision tizen in apps/core/preloaded/print-service not found print-service폴더는 있는데 안에 내용물이 없다.">
+<meta name="twitter:title" content="Cordova | Linux에서 Cordova 개발환경 설치">
+<meta name="twitter:description" content="Cordova Documentation:  http://cordova.apache.org/docs/en/3.3.0/guide_cli_index.md.html#The%20Command-Line%20Interface  Android studio 설치https://developer.android.com/sdk/index.html   npm과 nodejs설치 12">
     
 
     
@@ -133,18 +133,18 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    uncategorized
+    <a class="page-title-link" href="/categories/cordova/">cordova</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-tizen-print-service-not-found-error" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-cordova-linux-install" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Tizen | print-service not found 에러
+        Cordova | Linux에서 Cordova 개발환경 설치
         </h1>
     
 
@@ -154,8 +154,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2015/09/22/tizen-print-service-not-found-error/" class="article-date">
-            <time datetime="2015-09-22T04:39:56.000Z" itemprop="datePublished">2015-09-22</time>
+        <a href="/2015/05/25/cordova-linux-install/" class="article-date">
+            <time datetime="2015-05-25T13:41:58.000Z" itemprop="datePublished">2015-05-25</time>
         </a>
     </div>
 
@@ -164,15 +164,38 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>Tizen 코드를 repo sync로 받는데 중간에 에러가 나길래 repo sync -f로 강제로 받았는데</p>
-<p>계속 같은 에러를 내뿜으면서 다운이 실패하였다.</p>
-<p>error: in <code>sync -f</code>: revision tizen in apps/core/preloaded/print-service not found</p>
-<p>print-service폴더는 있는데 안에 내용물이 없다. 왜 없어 ㅠㅠ</p>
-<p><a href="https://review.tizen.org/git/" target="_blank" rel="external">https://review.tizen.org/git/</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> ssh://&lt;username&gt;@review.tizen.org:29418/apps/core/preloaded/<span class="built_in">print</span>-service.git</div></pre></td></tr></table></figure>
-<p>해서 그 디렉토리만 따로 다운 받으려고 했는데 이 방법도 에러나… 내가 잘못한건가…</p>
-<p>그래서 그냥 원래 다운받아놨던 tizen 파일에서 print-service 디렉토리를 통째로 복사해서 다시 repo sync 했더니 제대로 된다.</p>
-<p>아니 그럼 이걸 처음 다운 받는 사람들은 어떻게 문제 해결함ㅋㅋㅋㅋ 나도몰라 흐헣 왜 맨날 받을때마다 새로운 에러를 내뿜냐</p>
+            <p>Cordova Documentation:  <a href="http://cordova.apache.org/docs/en/3.3.0/guide_cli_index.md.html#The%20Command-Line%20Interface" target="_blank" rel="external">http://cordova.apache.org/docs/en/3.3.0/guide_cli_index.md.html#The%20Command-Line%20Interface</a></p>
+<ul>
+<li>Android studio 설치<br><a href="https://developer.android.com/sdk/index.html" target="_blank" rel="external">https://developer.android.com/sdk/index.html</a></li>
+</ul>
+<ol>
+<li><p>npm과 nodejs설치</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ sudo add-apt-repository ppa:chris-lea/node.js</div><div class="line">$ sudo apt-get install nodejs</div><div class="line">$ sudo apt-get install npm</div></pre></td></tr></table></figure>
+</li>
+<li><p>npm을 통해 cordova 설치</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo npm install -g cordova</div></pre></td></tr></table></figure>
+</li>
+<li><p>프로젝트 생성</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cordova create &lt;생성할 프로젝트 디렉토리&gt; &lt;APP_ID&gt;&lt;Bundle Display Name&gt;</div><div class="line">//$ cordova create <span class="built_in">test</span> com.test.app app</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li>만약 아래와 같은 오류가 발생한다면 node.js의 path가 지정되지 않은 것이다.<br>/usr/bin/env: node :No such file or directory</li>
+</ul>
+<p>다음 명령어를 실행한다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo ln -s /usr/bin/nodejs /usr/bin/node</div></pre></td></tr></table></figure></p>
+<p>*cordova platform add android 를 했을때</p>
+<p>Unable to fetch platform android: Error: EACCES, mkdir ‘/home/user/tmp/npm-12074-rNPOjSs_’와 같은 에러가 뜨는 것은 /home/user/tmp에 권한이 없는것이다. 그럴때는 권한을 주면 된다!<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo chown user /home/user/tmp -RV</div></pre></td></tr></table></figure></p>
+<ol>
+<li><p>사용할 플랫폼 추가</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> <span class="built_in">test</span>(생성한 프로젝트 디렉토리)</div><div class="line">$ cordova platform add &lt;target platform&gt;</div><div class="line">//$ cordova platform add android</div></pre></td></tr></table></figure>
+</li>
+<li><p>Emulator or Device에 테스트하기<br>Android Studio에서 Import project(Eclipse ADT, Gradle, etc.)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">test</span>/platforms/android</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>APACHE CORDOVA</p>
+<p>DEVICE IS READY 화면이 뜨면 성공!</p>
+<p>assets/www/ 디렉토리 밑에 HTML5, CSS3, javascript등의 파일을 이용해서 화면을 넣어주면 된다!</p>
 
         </div>
         <footer class="article-footer">
@@ -180,7 +203,7 @@
 
 
 
-    <a data-url="https://youngi08.github.io/2015/09/22/tizen-print-service-not-found-error/" data-id="cj75kaws10016kkwrs6hybpg2" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://youngi08.github.io/2015/05/25/cordova-linux-install/" data-id="cj75kawrp000xkkwr01po8pfc" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -263,22 +286,16 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/08/30/markdown-grammer/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2015/05/28/tizen-install/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            Hexo | 마크 다운 문법 정리
+            Tizen | 타이젠 설치법
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
-    
-        <a href="/2015/09/22/tizen-ssh-install-error/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Tizen | ssh 설치 에러 해결법</p>
-        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
-        </a>
     
 </nav>
 
@@ -419,7 +436,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://youngi08.github.io/2015/09/22/tizen-print-service-not-found-error/';
+    var disqus_url = 'https://youngi08.github.io/2015/05/25/cordova-linux-install/';
     
     (function() {
     var dsq = document.createElement('script');
