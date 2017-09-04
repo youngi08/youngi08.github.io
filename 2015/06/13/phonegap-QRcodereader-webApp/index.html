@@ -3,20 +3,23 @@
 <head>
     <meta charset="utf-8">
     
-    <title>보안 | start | Hello</title>
+    <title>Phonegap | QR코드 리더 webApp | Hello</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="" />
     
-    <meta property="og:type" content="article">
-<meta property="og:title" content="보안 | start">
-<meta property="og:url" content="https://youngi08.github.io/2017/09/03/0-security-start/index.html">
+    <meta name="description" content="개발 환경: Ubuntu Linux 14.04 LTS, Android Studio  Plugin 추가먼저 plugin을 추가하기 위해서는 plugman을 설치해야 한다.1$ npm install -g plugman    BarcodeScanner plugin 추가 1$ cordova plugin add https://github.com/wildabeast/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Phonegap | QR코드 리더 webApp">
+<meta property="og:url" content="https://youngi08.github.io/2015/06/13/phonegap-QRcodereader-webApp/index.html">
 <meta property="og:site_name" content="Hello">
+<meta property="og:description" content="개발 환경: Ubuntu Linux 14.04 LTS, Android Studio  Plugin 추가먼저 plugin을 추가하기 위해서는 plugman을 설치해야 한다.1$ npm install -g plugman    BarcodeScanner plugin 추가 1$ cordova plugin add https://github.com/wildabeast/">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-09-04T02:26:23.000Z">
+<meta property="og:updated_time" content="2017-09-04T02:36:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="보안 | start">
+<meta name="twitter:title" content="Phonegap | QR코드 리더 webApp">
+<meta name="twitter:description" content="개발 환경: Ubuntu Linux 14.04 LTS, Android Studio  Plugin 추가먼저 plugin을 추가하기 위해서는 plugman을 설치해야 한다.1$ npm install -g plugman    BarcodeScanner plugin 추가 1$ cordova plugin add https://github.com/wildabeast/">
     
 
     
@@ -130,18 +133,18 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/security/">security</a>
+    uncategorized
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-0-security-start" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-phonegap-QRcodereader-webApp" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        보안 | start
+        Phonegap | QR코드 리더 webApp
         </h1>
     
 
@@ -151,8 +154,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2017/09/03/0-security-start/" class="article-date">
-            <time datetime="2017-09-03T07:06:19.000Z" itemprop="datePublished">2017-09-03</time>
+        <a href="/2015/06/13/phonegap-QRcodereader-webApp/" class="article-date">
+            <time datetime="2015-06-13T13:35:51.000Z" itemprop="datePublished">2015-06-13</time>
         </a>
     </div>
 
@@ -161,14 +164,39 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            
+            <p>개발 환경: Ubuntu Linux 14.04 LTS, Android Studio</p>
+<ol>
+<li>Plugin 추가<br>먼저 plugin을 추가하기 위해서는 plugman을 설치해야 한다.<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g plugman</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li><p>BarcodeScanner plugin 추가</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cordova plugin add https://github.com/wildabeast/BarcodeScanner.git</div></pre></td></tr></table></figure>
+</li>
+<li><p>InAppBrowser plugin 추가</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cordova plugin add cordova-plugin-inappbrowser</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li>user-permission 추가<br>AndroidManifest.xml 파일에 uses-permission 추가<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;uses-permission android:name=&quot;android.permission.CAMERA&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.FLASHLIGHT&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li>index.js</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> resultDiv;</div><div class="line"></div><div class="line"><span class="built_in">document</span>.addEventListener(<span class="string">"deviceready"</span>, init, <span class="literal">false</span>);</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">document</span>.querySelector(<span class="string">"#startScan"</span>).addEventListener(<span class="string">"touchend"</span>, startScan, <span class="literal">false</span>);</div><div class="line">    resultDiv = <span class="built_in">document</span>.querySelector(<span class="string">"#results"</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"> <span class="built_in">document</span>.addEventListener(<span class="string">"deviceready"</span>, re, <span class="literal">false</span>);</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">startScan</span>(<span class="params"></span>) </span>&#123;인인</div><div class="line"></div><div class="line">    cordova.plugins.barcodeScanner.scan(</div><div class="line">        <span class="function"><span class="keyword">function</span> <span class="title">re</span> (<span class="params">result</span>) </span>&#123;</div><div class="line">            <span class="comment">//바코드가 읽힌 결과 확인</span></div><div class="line">            <span class="comment">/*</span></div><div class="line"><span class="comment">            var s = "Result: " + result.text + "&lt;br/&gt;" +</span></div><div class="line"><span class="comment">            "Format: " + result.format + "&lt;br/&gt;" +</span></div><div class="line"><span class="comment">            "Cancelled: " + result.cancelled;</span></div><div class="line"><span class="comment">            */</span></div><div class="line"></div><div class="line">            <span class="comment">//바코드 읽은 결과를 실제 browser에 띄우기</span></div><div class="line">             <span class="keyword">var</span> ref = <span class="built_in">window</span>.open(result.text, <span class="string">'_self'</span>, <span class="string">'location=no'</span>);</div><div class="line"></div><div class="line">             ref.addEventListener(<span class="string">'loadstart'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">                 <span class="keyword">var</span> urlSuccessPage = result.txt;</div><div class="line">                 <span class="keyword">if</span> (event.url == urlSuccessPage) &#123;</div><div class="line">                 ref.close();</div><div class="line">                 &#125;</div><div class="line">             &#125;);</div><div class="line">            alert(<span class="string">'test'</span>);</div><div class="line"></div><div class="line">        &#125;,</div><div class="line">        <span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</div><div class="line">            alert(<span class="string">"Scanning failed: "</span> + error);</div><div class="line">        &#125;</div><div class="line">    );</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>index.html<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"startScan"</span>&gt;</span>Start Scan<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"results"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"barcodescanner.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="https://youngi08.github.io/2017/09/03/0-security-start/" data-id="cj75k1mt100016gwr2q5xykvs" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://youngi08.github.io/2015/06/13/phonegap-QRcodereader-webApp/" data-id="cj75k1mtz000w6gwrhjvq1vnl" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -251,20 +279,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/09/03/2-cryptography-overview/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2015/06/13/tizen-source-build/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            보안 | 암호학 개요
+            Tizen | Tizen 코드 설치 및 빌드 방법
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2017/09/03/1-security-overview/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2015/05/28/tizen-install/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">보안 | 정보보호관리의 개념</p>
+        <p class="article-nav-title">Tizen | 타이젠 설치법</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -407,7 +435,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://youngi08.github.io/2017/09/03/0-security-start/';
+    var disqus_url = 'https://youngi08.github.io/2015/06/13/phonegap-QRcodereader-webApp/';
     
     (function() {
     var dsq = document.createElement('script');

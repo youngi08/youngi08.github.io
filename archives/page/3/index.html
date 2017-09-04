@@ -3,23 +3,17 @@
 <head>
     <meta charset="utf-8">
     
-    <title>MIC-make-tizen-image | Hello</title>
+    <title>Archive | Hello</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="" />
-    
-    <meta name="description" content="참고 사이트:https://source.tizen.org/ko/documentation/developer-guide/getting-started-guide/creating-tizen-images-michttps://wiki.tizen.org/wiki/Modify_Emulator_Image  KickckStart File 다운로드http://download.">
-<meta property="og:type" content="article">
-<meta property="og:title" content="MIC-make-tizen-image">
-<meta property="og:url" content="https://youngi08.github.io/2017/09/04/tizen-MIC-make-image/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Hello">
+<meta property="og:url" content="https://youngi08.github.io/archives/page/3/index.html">
 <meta property="og:site_name" content="Hello">
-<meta property="og:description" content="참고 사이트:https://source.tizen.org/ko/documentation/developer-guide/getting-started-guide/creating-tizen-images-michttps://wiki.tizen.org/wiki/Modify_Emulator_Image  KickckStart File 다운로드http://download.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-09-04T02:25:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MIC-make-tizen-image">
-<meta name="twitter:description" content="참고 사이트:https://source.tizen.org/ko/documentation/developer-guide/getting-started-guide/creating-tizen-images-michttps://wiki.tizen.org/wiki/Modify_Emulator_Image  KickckStart File 다운로드http://download.">
+<meta name="twitter:title" content="Hello">
     
 
     
@@ -133,166 +127,102 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/tizen/">tizen</a>
+    <i class="icon fa fa-archive"></i>Archive
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-tizen-MIC-make-image" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
+                            
+
+    
+    
         
-            <header class="article-header">
-                
+        
+        <section class="archives-wrap">
+            <div class="archive-year-wrap">
+                <a href="/archives/2015" class="archive-year"><i class="icon fa fa-calendar-o"></i>2015</a>
+            </div>
+            <div class="archives">
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <div class="article-meta">
+            <div class="category">
+            
+            </div>
+            <div class="date"><time datetime="2015-06-13T13:35:51.000Z" itemprop="datePublished">2015-06-13</time></div>
+        </div>
+        
     
         <h1 class="article-title" itemprop="name">
-        MIC-make-tizen-image
+        <a href="/2015/06/13/phonegap-QRcodereader-webApp/">Phonegap | QR코드 리더 webApp</a>
         </h1>
     
 
-            </header>
-        
-        
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <a href="/2017/09/04/tizen-MIC-make-image/" class="article-date">
-            <time datetime="2017-09-04T02:21:48.000Z" itemprop="datePublished">2017-09-04</time>
-        </a>
-    </div>
+        <p class="article-excerpt">
+            개발 환경: Ubuntu Linux 14.04 LTS, Android Studio
 
-                
-            </div>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            <p>참고 사이트:<br><a href="https://source.tizen.org/ko/documentation/developer-guide/getting-started-guide/creating-tizen-images-mic" target="_blank" rel="external">https://source.tizen.org/ko/documentation/developer-guide/getting-started-guide/creating-tizen-images-mic</a><br><a href="https://wiki.tizen.org/wiki/Modify_Emulator_Image" target="_blank" rel="external">https://wiki.tizen.org/wiki/Modify_Emulator_Image</a></p>
-<ol>
-<li>KickckStart File 다운로드<br><a href="http://download.tizen.org/" target="_blank" rel="external">http://download.tizen.org/</a> 에서 버전에 맞는 KickStart File을 다운로드 해야 한다.</li>
-</ol>
-<ul>
-<li>i586 mobile 버전 기준<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ wget http://download.tizen.org/snapshots/tizen/mobile/tizen-mobile_20150613.2/images/emulator32-wayland/mobile-emulator32-wayland/tizen-mobile_20150613.2_mobile-emulator32-wayland.ks</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol>
-<li><p>Tizen Image 만들기</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gbs createimage --ks-file=tizen-mobile_20150613.2_mobile-emulator32-wayland.ks</div></pre></td></tr></table></figure>
-</li>
-<li><p>Emulator Image 수정하기<br>tizen 다운받은 디렉토리안에 mic-output 폴더에서 ~.tar.gz 압축풀면 platform.img가 있다.</p>
-</li>
-</ol>
-<p>-&gt; 최근 버전 경우(mobile)는 ~.tar.gz 압축을 풀면 emulator-rootfs.img emulator-sysdata.img emulator-user.img이 들어있다.</p>
-<p>이 경우에는 qemu-img로 빌드 할때<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ~/tizen-sdk/tools/emulator/bin/qemu-img convert -O qcow2 emulator-rootfs.img emulator-sysdata.img emulator-user.img emulimg.3.0.x86</div></pre></td></tr></table></figure></p>
-<p>하면 제대로 런치화면에서 작동한다.</p>
-<ul>
-<li>빌드할때 자동으로 Emulator Image를 만들어주고 싶을때는<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gbs build -A i586 -R http://download.tizen.org/snapshots/tizen/ivi/latest/repos/emulator/packages/ --define <span class="string">"with emulator"</span> --overwrite --include-all</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li>Mobile 버전의 경우는 emulator도 32/64bit 로 나뉘어져있다.</li>
-</ul>
-<ol>
-<li>Tizen SDK에서 img파일을 열어주면 된다!</li>
-</ol>
-<p><a href="https://wiki.tizen.org/wiki/Tizen_IVI_SDK" target="_blank" rel="external">https://wiki.tizen.org/wiki/Tizen_IVI_SDK</a></p>
-<p>출처: <a href="http://kisys.tistory.com/entry/Tizen-MIC를-이용한-Tizen-Image-만들기" target="_blank" rel="external">http://kisys.tistory.com/entry/Tizen-MIC를-이용한-Tizen-Image-만들기</a> [HelloWorld!]</p>
-
-        </div>
-        <footer class="article-footer">
-            
+Plugin 추가먼저 plugin을 추가하기 위해서는 plugman을 설치해야 한다.1$ npm install -g plugman
 
 
 
-    <a data-url="https://youngi08.github.io/2017/09/04/tizen-MIC-make-image/" data-id="cj75joydi000qs3wrtgznq0ic" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-        </footer>
+BarcodeScanner plugin 추가
+1$ cordova plugin add https://github.com/wildabeast/
+        </p>
     </div>
 </article>
-
-    <section id="comments">
     
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
         
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/tizen/">tizen</a>
+            </div>
+            <div class="date"><time datetime="2015-05-28T14:36:59.000Z" itemprop="datePublished">2015-05-28</time></div>
+        </div>
+        
     
-    </section>
+        <h1 class="article-title" itemprop="name">
+        <a href="/2015/05/28/tizen-install/">Tizen | 타이젠 설치법</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            타이젠 웹사이트 계정 생성 및 Gerrit등록, 소스코드 다운 받는 법을 자세히 알려준 블로그!설치중 발생하는 에러 상황 대처법까지 자세히 정리되어있다.
+http://seoz.egloos.com/3913161
+http://miatistory.tistory.com/6
+
+        </p>
+    </div>
+</article>
+    
+        </div>
+    
+
+
+    </div></section>
+
+
+    <nav id="page-nav">
+        <span class="pages">Page 3 of 3</span>
+        <a class="extend prev" rel="prev" href="/archives/page/2/">&laquo;</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span>
+    </nav>
 
 
                         </div>
                     </section>
                     <aside id="sidebar">
     <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
-    
-        
-<nav id="article-nav">
-    
-    
-        <a href="/2017/09/04/6-2-PKI/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">보안 | PKI</p>
-        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
-        </a>
-    
-</nav>
-
     
     <div class="widgets-container">
         
@@ -302,15 +232,6 @@
         <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class="no-thumbnail">
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/tizen/">tizen</a></p>
-                            <p class="item-title"><a href="/2017/09/04/tizen-MIC-make-image/" class="title">MIC-make-tizen-image</a></p>
-                            <p class="item-date"><time datetime="2017-09-04T02:21:48.000Z" itemprop="datePublished">2017-09-04</time></p>
-                        </div>
-                    </li>
                 
                     <li>
                         
@@ -345,6 +266,15 @@
                             <p class="item-category"><a class="article-category-link" href="/categories/security/">security</a></p>
                             <p class="item-title"><a href="/2017/09/03/3-symmetric-key/" class="title">보안 | 대칭키 암호</a></p>
                             <p class="item-date"><time datetime="2017-09-03T11:18:03.000Z" itemprop="datePublished">2017-09-03</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/security/">security</a></p>
+                            <p class="item-title"><a href="/2017/09/03/2-cryptography-overview/" class="title">보안 | 암호학 개요</a></p>
+                            <p class="item-date"><time datetime="2017-09-03T08:13:01.000Z" itemprop="datePublished">2017-09-03</time></p>
                         </div>
                     </li>
                 
@@ -430,13 +360,11 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://youngi08.github.io/2017/09/04/tizen-MIC-make-image/';
-    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
