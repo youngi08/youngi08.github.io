@@ -3,17 +3,23 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Category: hexo | Hello</title>
+    <title>보안 | PKI | Hello</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hello">
-<meta property="og:url" content="https://youngi08.github.io/categories/web/hexo/index.html">
+        <meta name="keywords" content="" />
+    
+    <meta name="description" content="PKI  PKI(Public-Key Infrastructure)  공개키 알고리즘을 위한 키 관리 구조 제공 서비스 기밀성, 접근제어, 무결성, 인증, 부인방지   구성요소  인증기관(CA, Certification Authority) 인증정책을 수립하고, 인증서 및 인증서 효력정지 및 폐기목록을 관리하며, 다른 CA와의 상호 인증 제공   정책 승인기관(">
+<meta property="og:type" content="article">
+<meta property="og:title" content="보안 | PKI">
+<meta property="og:url" content="https://youngi08.github.io/2017/09/04/6-2-PKI/index.html">
 <meta property="og:site_name" content="Hello">
+<meta property="og:description" content="PKI  PKI(Public-Key Infrastructure)  공개키 알고리즘을 위한 키 관리 구조 제공 서비스 기밀성, 접근제어, 무결성, 인증, 부인방지   구성요소  인증기관(CA, Certification Authority) 인증정책을 수립하고, 인증서 및 인증서 효력정지 및 폐기목록을 관리하며, 다른 CA와의 상호 인증 제공   정책 승인기관(">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-09-04T02:10:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello">
+<meta name="twitter:title" content="보안 | PKI">
+<meta name="twitter:description" content="PKI  PKI(Public-Key Infrastructure)  공개키 알고리즘을 위한 키 관리 구조 제공 서비스 기밀성, 접근제어, 무결성, 인증, 부인방지   구성요소  인증기관(CA, Certification Authority) 인증정책을 수립하고, 인증서 및 인증서 효력정지 및 폐기목록을 관리하며, 다른 CA와의 상호 인증 제공   정책 승인기관(">
     
 
     
@@ -127,80 +133,231 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-folder-open"></i>Category: <em class="page-title-link">hexo</em>
+    <a class="page-title-link" href="/categories/security/">security</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-6-2-PKI" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2017" class="archive-year"><i class="icon fa fa-calendar-o"></i>2017</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/web/">web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/web/hexo/">hexo</a>
-            </div>
-            <div class="date"><time datetime="2017-08-30T08:28:01.000Z" itemprop="datePublished">2017-08-30</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/30/markdown-grammer/">Hexo | 마크 다운 문법 정리</a>
+        보안 | PKI
         </h1>
     
 
-        <p class="article-excerpt">
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/09/04/6-2-PKI/" class="article-date">
+            <time datetime="2017-09-04T01:36:33.000Z" itemprop="datePublished">2017-09-04</time>
+        </a>
+    </div>
+
+                
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h3 id="PKI"><a href="#PKI" class="headerlink" title="PKI"></a>PKI</h3><hr>
+<ul>
+<li><p>PKI(Public-Key Infrastructure)</p>
+<ul>
+<li>공개키 알고리즘을 위한 키 관리 구조</li>
+<li>제공 서비스<ul>
+<li>기밀성, 접근제어, 무결성, 인증, 부인방지</li>
+</ul>
+</li>
+<li><p>구성요소</p>
+<ul>
+<li>인증기관(CA, Certification Authority)<ul>
+<li>인증정책을 수립하고, 인증서 및 인증서 효력정지 및 폐기목록을 관리하며, 다른 CA와의 상호 인증 제공</li>
+</ul>
+</li>
+<li>정책 승인기관(PPA, Policy Approving Authority)<ul>
+<li>공개키 기반 구조 전반에 사용되는 정책과 절차 생성 수립</li>
+<li>하위 기과들의 정책 준수 상태 및 적정성 감사</li>
+</ul>
+</li>
+<li><p>정책 인증기관(PCA, Policy Certification Authority)</p>
+<ul>
+<li>PAA 아래 계층으로 자신의 도메인 내의 사용자와 인증기관이 따라야 할 정책 수립</li>
+<li>인증기관의 공개키를 인증하고 인증서, 인증서 폐지 목록 등 관리</li>
+</ul>
+</li>
+<li><p>등록기관</p>
+<ul>
+<li>인증기관과 멀리 떨어져 있는 사용자들을 위해 인증기관과 사용자 사이에 등록기관을 두어 인증기관 대신 사용자들의 인증서 신청 시 그들의 신분과 소속을 확인하는 기능 수행</li>
+</ul>
+</li>
+<li><p>저장소</p>
+<ul>
+<li>사용자의 인증서를 저장하는 저장소의 역할을 하는 일종의 데이터베이스</li>
+</ul>
+</li>
+<li><p>사용자</p>
+<ul>
+<li>PKI 내의 사용자는 사람뿐만 아니라 사람이 이용하는 시스템 모두 의미</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>PKI의 형태</p>
+<ul>
+<li>계층구조</li>
+<li>네트워크 구조</li>
+<li>혼합형 구조</li>
+</ul>
+</li>
+<li><p>PKI의 주요 관리 대상</p>
+<ul>
+<li>인증서(PKC, Public-Key Certiticate)<ul>
+<li>한 쌍의 공개키/개인키와 특정 사람/기관을 연결시켜 주는 것을 보증해줌</li>
+<li>공개키 인증서에는 이름, 소속, 메일 주소 등의 개인정보 및 그 사람의 공개키가 기재되고, 인증기관의 개인키로 전자서명 되어있음</li>
+</ul>
+</li>
+<li>인증서 표준 규격 X.509<ul>
+<li>인증서의 작성, 교환을 수행할 때의 표준 규격</li>
+</ul>
+</li>
+<li>X.509 인증서 폐지 목록 프로파일<ul>
+<li>CRL(Certification Revocation List)<ul>
+<li>폐지된 인증서들에 대한 목록</li>
+</ul>
+</li>
+<li>인증서 폐지 사유<ul>
+<li>사용자 개인키가 노출되었거나 훼손된 것으로 여겨진다</li>
+<li>CA가 사용자를 더 이상 인증해줄 수 없다</li>
+<li>CA의 인증서가 노출되었거나 훼손된 것으로 여겨진다</li>
+</ul>
+</li>
+<li>인증서 운영 프로토콜<ul>
+<li>온라인 인증서 상태 검증 프로토콜(OCSP, Online Certiticate Status Protocol)<ul>
+<li>실시간으로 인증서의 상태 정보를 확인할 수 있는 효율적인 방법</li>
+<li>구성 요소<ul>
+<li>OCSP 클라이언트, OCSP 서버, 인증 서버로 구성</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>서버 기반 인증서 검증 프로토콜(SCVP, Simple Certitication Validation Protocol)<ul>
+<li>SCVP 서버를 이용하여 클라이언트의 인증서 처리에 대한 부담을 줄여 줌</li>
+<li>SCVP 서버는 인증서의 유효성 혹은 신뢰할 수 있는 인증서의 체인 등 인증서에 관한 가치 있는 다양한 정보 제공</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
             
-글자 서식
-
-&lt;__문자__&gt; 강조
-&lt;_문자_&gt; 기울림
-&lt;~~문자~~&gt; 취소
-
-
-수식
-
-윗 첨자와 아래 첨자
-&lt;sup&gt; 윗 첨자sup
-&lt;sub&gt; 아래 첨자sub
-
-
-사선
 
 
 
+    <a data-url="https://youngi08.github.io/2017/09/04/6-2-PKI/" data-id="cj75j4gcc0003d8wrtprrv6g0" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
 
-        </p>
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
-
+    </section>
 
 
                         </div>
                     </section>
                     <aside id="sidebar">
     <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/09/03/5-hash-functions-and-applications/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">보안 | 해시함수와 응용</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -338,11 +495,13 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'https://youngi08.github.io/2017/09/04/6-2-PKI/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
