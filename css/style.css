@@ -1042,7 +1042,7 @@ code {
   text-decoration: none;
   font-size: 38px;
   letter-spacing: -1px;
-  color: #555;
+  color: #2386b4;
   line-height: 1.3em;
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
@@ -1090,7 +1090,7 @@ a.article-title:hover {
   overflow: hidden;
 }
 .article-summary .article-meta a {
-  color: #666;
+  color: #b32552;
 }
 .article-summary .article-meta > div {
   margin-right: 0;
