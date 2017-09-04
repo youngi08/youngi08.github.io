@@ -3,20 +3,24 @@
 <head>
     <meta charset="utf-8">
     
-    <title>보안 | start | Hello</title>
+    <title>odroid에 구글 크로미움 포팅하기 | Hello</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="" />
+        <meta name="keywords" content="chromium,odroid" />
     
-    <meta property="og:type" content="article">
-<meta property="og:title" content="보안 | start">
-<meta property="og:url" content="https://youngi08.github.io/2017/09/03/security-start/index.html">
+    <meta name="description" content="삽질한 것에 비해 굉장히 간단한 방법으로 할 수 있다. 여기에 몇 일을 날렸는가…ㅠㅠ먼저 원리를 제대로 이해하고 했으면 삽질이라고 할 수도 없을 만큼 빠른 시간 안에 할 수 있었을 것이다. 방향을 이상하게 잡아서 삽질하다 보니 굉장히 오래 걸리게 되었다. odroid xu3 보드에 크로미움을 포팅하기 위해서는 arm 32bit용으로 컴파일 해야 한다.  H">
+<meta name="keywords" content="chromium,odroid">
+<meta property="og:type" content="article">
+<meta property="og:title" content="odroid에 구글 크로미움 포팅하기">
+<meta property="og:url" content="https://youngi08.github.io/2017/08/30/odroid-porting-chromium/index.html">
 <meta property="og:site_name" content="Hello">
+<meta property="og:description" content="삽질한 것에 비해 굉장히 간단한 방법으로 할 수 있다. 여기에 몇 일을 날렸는가…ㅠㅠ먼저 원리를 제대로 이해하고 했으면 삽질이라고 할 수도 없을 만큼 빠른 시간 안에 할 수 있었을 것이다. 방향을 이상하게 잡아서 삽질하다 보니 굉장히 오래 걸리게 되었다. odroid xu3 보드에 크로미움을 포팅하기 위해서는 arm 32bit용으로 컴파일 해야 한다.  H">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-09-03T07:07:41.000Z">
+<meta property="og:updated_time" content="2017-08-31T07:20:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="보안 | start">
+<meta name="twitter:title" content="odroid에 구글 크로미움 포팅하기">
+<meta name="twitter:description" content="삽질한 것에 비해 굉장히 간단한 방법으로 할 수 있다. 여기에 몇 일을 날렸는가…ㅠㅠ먼저 원리를 제대로 이해하고 했으면 삽질이라고 할 수도 없을 만큼 빠른 시간 안에 할 수 있었을 것이다. 방향을 이상하게 잡아서 삽질하다 보니 굉장히 오래 걸리게 되었다. odroid xu3 보드에 크로미움을 포팅하기 위해서는 arm 32bit용으로 컴파일 해야 한다.  H">
     
 
     
@@ -70,7 +74,7 @@
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/algorithm/">algorithm</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/algorithm/sort/">sort</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/chromium/">chromium</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/odroid/">odroid</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/security/">security</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web/">web</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web/hexo/">hexo</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/algorithm/">algorithm</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/algorithm/sort/">sort</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/chromium/">chromium</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/odroid/">odroid</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/security/">security</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/tizen/">tizen</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web/">web</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web/hexo/">hexo</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/">About</a>
@@ -130,18 +134,18 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/security/">security</a>
+    <a class="page-title-link" href="/categories/odroid/">odroid</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-security-start" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-odroid-porting-chromium" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        보안 | start
+        odroid에 구글 크로미움 포팅하기
         </h1>
     
 
@@ -151,24 +155,40 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2017/09/03/security-start/" class="article-date">
-            <time datetime="2017-09-03T07:06:19.000Z" itemprop="datePublished">2017-09-03</time>
+        <a href="/2017/08/30/odroid-porting-chromium/" class="article-date">
+            <time datetime="2017-08-30T09:41:31.000Z" itemprop="datePublished">2017-08-30</time>
         </a>
     </div>
 
                 
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/chromium/">chromium</a>, <a class="tag-link" href="/tags/odroid/">odroid</a>
+    </div>
+
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            
+            <p>삽질한 것에 비해 굉장히 간단한 방법으로 할 수 있다. 여기에 몇 일을 날렸는가…ㅠㅠ<br>먼저 원리를 제대로 이해하고 했으면 삽질이라고 할 수도 없을 만큼 빠른 시간 안에 할 수 있었을 것이다. 방향을 이상하게 잡아서 삽질하다 보니 굉장히 오래 걸리게 되었다.</p>
+<p>odroid xu3 보드에 크로미움을 포팅하기 위해서는 arm 32bit용으로 컴파일 해야 한다.</p>
+<ol>
+<li><p>Hardkernel 사이트에서 크로스컴파일을 위한 툴체인, 환경을 세팅한다. 내 보드는 xu3이다.<br><a href="http://odroid.com/dokuwiki/doku.php?id=en:xu3_building_kernel" target="_blank" rel="external">http://odroid.com/dokuwiki/doku.php?id=en:xu3_building_kernel</a></p>
+</li>
+<li><p>크로미움 크로스컴파일 하기<br><a href="http://unix.stackexchange.com/questions/176794/how-do-i-cross-compile-chromium-for-arm" target="_blank" rel="external">http://unix.stackexchange.com/questions/176794/how-do-i-cross-compile-chromium-for-arm</a><br>위 사이트 참조!</p>
+</li>
+</ol>
+<p>크로미움 코드를 다운로드 하기 위한 과정은 같다.<br>(1) depot_tools 설치<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://chromium.googlesource.com/chromium/tools/depot_tools</div><div class="line">$ <span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:~/chromium/depot_tools</div></pre></td></tr></table></figure></p>
+<p>(2) 크로미움 코드 다운로드<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ mkdir chromium &amp;&amp; <span class="built_in">cd</span> ~/chromium</div><div class="line">$ fetch --nohooks chromium</div></pre></td></tr></table></figure></p>
+<p>(3)ARM용 컴파일<br><a href="https://www.olimex.com/forum/index.php?topic=4109.0" target="_blank" rel="external">https://www.olimex.com/forum/index.php?topic=4109.0</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">./build/install-build-deps.sh --arm &amp;&amp;</div><div class="line">gclient sync &amp;&amp;</div><div class="line">GYP_CROSSCOMPILE=1 GYP_DEFINES=<span class="string">"target_arch=arm arm_float_abi=hard component=shared_library linux_use_gold_flags=1"</span> gclient runhooks &amp;&amp;</div><div class="line">ninja -C out/Release chrome</div></pre></td></tr></table></figure></p>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="https://youngi08.github.io/2017/09/03/security-start/" data-id="cj75j4gd5000ud8wr6sub9hka" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://youngi08.github.io/2017/08/30/odroid-porting-chromium/" data-id="cj75joydt000ys3wr4kie00fz" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -251,20 +271,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/09/03/2-cryptography-overview/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2017/08/31/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            보안 | 암호학 개요
+            Hello World
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2017/09/03/1-security-overview/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/08/30/markdown-grammer/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">보안 | 정보보호관리의 개념</p>
+        <p class="article-nav-title">Hexo | 마크 다운 문법 정리</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -279,6 +299,15 @@
         <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/tizen/">tizen</a></p>
+                            <p class="item-title"><a href="/2017/09/04/tizen-MIC-make-image/" class="title">MIC-make-tizen-image</a></p>
+                            <p class="item-date"><time datetime="2017-09-04T02:21:48.000Z" itemprop="datePublished">2017-09-04</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -316,15 +345,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/security/">security</a></p>
-                            <p class="item-title"><a href="/2017/09/03/2-cryptography-overview/" class="title">보안 | 암호학 개요</a></p>
-                            <p class="item-date"><time datetime="2017-09-03T08:13:01.000Z" itemprop="datePublished">2017-09-03</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -334,7 +354,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/algorithm/">algorithm</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/algorithm/sort/">sort</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/chromium/">chromium</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/odroid/">odroid</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/security/">security</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/">web</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/web/hexo/">hexo</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/algorithm/">algorithm</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/algorithm/sort/">sort</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/chromium/">chromium</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/odroid/">odroid</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/security/">security</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tizen/">tizen</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/">web</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/web/hexo/">hexo</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -407,7 +427,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://youngi08.github.io/2017/09/03/security-start/';
+    var disqus_url = 'https://youngi08.github.io/2017/08/30/odroid-porting-chromium/';
     
     (function() {
     var dsq = document.createElement('script');
