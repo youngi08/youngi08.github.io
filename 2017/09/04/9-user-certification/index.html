@@ -3,23 +3,23 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Tizen | MIC를 이용한 Tizen Image 만들기 | Hello</title>
+    <title>보안 | 사용자 인증 | Hello</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="" />
     
-    <meta name="description" content="참고 사이트:https://source.tizen.org/ko/documentation/developer-guide/getting-started-guide/creating-tizen-images-michttps://wiki.tizen.org/wiki/Modify_Emulator_Image  KickckStart File 다운로드http://download.">
+    <meta name="description" content="인증  메시지 인증  전달되는 메시지의 이상 유무를 확인할 수 있는 기능(무결성 검증) 전송 중 발생할 수 있는 메시지 내용 변경, 메시지 순서 변경, 메시지 삭제 여부를 확인하는 기능   사용자 인증  정당한 가입자의 접속인가를 확인하기 위한 사용자 인증이 컴퓨터 통신망 운영에 필수적 요건 사용자 인증의 유형* |      유형     |">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Tizen | MIC를 이용한 Tizen Image 만들기">
-<meta property="og:url" content="https://youngi08.github.io/2015/06/13/tizen-MIC-make-image/index.html">
+<meta property="og:title" content="보안 | 사용자 인증">
+<meta property="og:url" content="https://youngi08.github.io/2017/09/04/9-user-certification/index.html">
 <meta property="og:site_name" content="Hello">
-<meta property="og:description" content="참고 사이트:https://source.tizen.org/ko/documentation/developer-guide/getting-started-guide/creating-tizen-images-michttps://wiki.tizen.org/wiki/Modify_Emulator_Image  KickckStart File 다운로드http://download.">
+<meta property="og:description" content="인증  메시지 인증  전달되는 메시지의 이상 유무를 확인할 수 있는 기능(무결성 검증) 전송 중 발생할 수 있는 메시지 내용 변경, 메시지 순서 변경, 메시지 삭제 여부를 확인하는 기능   사용자 인증  정당한 가입자의 접속인가를 확인하기 위한 사용자 인증이 컴퓨터 통신망 운영에 필수적 요건 사용자 인증의 유형* |      유형     |">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-09-04T02:33:07.000Z">
+<meta property="og:updated_time" content="2017-09-04T08:28:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tizen | MIC를 이용한 Tizen Image 만들기">
-<meta name="twitter:description" content="참고 사이트:https://source.tizen.org/ko/documentation/developer-guide/getting-started-guide/creating-tizen-images-michttps://wiki.tizen.org/wiki/Modify_Emulator_Image  KickckStart File 다운로드http://download.">
+<meta name="twitter:title" content="보안 | 사용자 인증">
+<meta name="twitter:description" content="인증  메시지 인증  전달되는 메시지의 이상 유무를 확인할 수 있는 기능(무결성 검증) 전송 중 발생할 수 있는 메시지 내용 변경, 메시지 순서 변경, 메시지 삭제 여부를 확인하는 기능   사용자 인증  정당한 가입자의 접속인가를 확인하기 위한 사용자 인증이 컴퓨터 통신망 운영에 필수적 요건 사용자 인증의 유형* |      유형     |">
     
 
     
@@ -135,18 +135,18 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/tizen/">tizen</a>
+    <a class="page-title-link" href="/categories/security/">security</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-tizen-MIC-make-image" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-9-user-certification" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Tizen | MIC를 이용한 Tizen Image 만들기
+        보안 | 사용자 인증
         </h1>
     
 
@@ -156,8 +156,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2015/06/13/tizen-MIC-make-image/" class="article-date">
-            <time datetime="2015-06-13T14:37:48.000Z" itemprop="datePublished">2015-06-13</time>
+        <a href="/2017/09/04/9-user-certification/" class="article-date">
+            <time datetime="2017-09-04T05:57:08.000Z" itemprop="datePublished">2017-09-04</time>
         </a>
     </div>
 
@@ -166,36 +166,23 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>참고 사이트:<br><a href="https://source.tizen.org/ko/documentation/developer-guide/getting-started-guide/creating-tizen-images-mic" target="_blank" rel="external">https://source.tizen.org/ko/documentation/developer-guide/getting-started-guide/creating-tizen-images-mic</a><br><a href="https://wiki.tizen.org/wiki/Modify_Emulator_Image" target="_blank" rel="external">https://wiki.tizen.org/wiki/Modify_Emulator_Image</a></p>
-<ol>
-<li>KickckStart File 다운로드<br><a href="http://download.tizen.org/" target="_blank" rel="external">http://download.tizen.org/</a> 에서 버전에 맞는 KickStart File을 다운로드 해야 한다.</li>
-</ol>
+            <h3 id="인증"><a href="#인증" class="headerlink" title="인증"></a>인증</h3><hr>
 <ul>
-<li>i586 mobile 버전 기준<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ wget http://download.tizen.org/snapshots/tizen/mobile/tizen-mobile_20150613.2/images/emulator32-wayland/mobile-emulator32-wayland/tizen-mobile_20150613.2_mobile-emulator32-wayland.ks</div></pre></td></tr></table></figure>
+<li><p>메시지 인증</p>
+<ul>
+<li>전달되는 메시지의 이상 유무를 확인할 수 있는 기능(무결성 검증)</li>
+<li>전송 중 발생할 수 있는 메시지 내용 변경, 메시지 순서 변경, 메시지 삭제 여부를 확인하는 기능</li>
+</ul>
+</li>
+<li><p>사용자 인증</p>
+<ul>
+<li>정당한 가입자의 접속인가를 확인하기 위한 사용자 인증이 컴퓨터 통신망 운영에 필수적 요건</li>
+<li><p>사용자 인증의 유형<br>*</p>
+<p>|      유형     |                 설명                     |        예          |<br>|:-:|:-:|:-:|<br>|  type1(지식)  | 주체는 그가 알고 있는 것을 보여줌               | 패스워드, 핀(PIN)    |<br>|  type2(소유)  | 주체는 그가 가지고 있는 것을 보여줌              | 토큰, 스마트 카드     |<br>|  type3(존재)  | 주체는 그를 나타내는 것을 보여줌                | 생체인증             |<br>|  type4(행위)  | 주체는 그가 하는 것을 보여줌                   | 서명, 움직임, 음성    |<br>|  Two Factor  | 위 타입 중에서 두 가지 인증 메커니즘을 결함하여 구현 | 토큰 + PIN         |<br>| Multi Factor | 가장 강한 인증으로 세 가지 이상의 인증 메커니즘 사용 | 토큰 + PIN + 지문인식 |</p>
 </li>
 </ul>
-<ol>
-<li><p>Tizen Image 만들기</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gbs createimage --ks-file=tizen-mobile_20150613.2_mobile-emulator32-wayland.ks</div></pre></td></tr></table></figure>
-</li>
-<li><p>Emulator Image 수정하기<br>tizen 다운받은 디렉토리안에 mic-output 폴더에서 ~.tar.gz 압축풀면 platform.img가 있다.</p>
-</li>
-</ol>
-<p>-&gt; 최근 버전 경우(mobile)는 ~.tar.gz 압축을 풀면 emulator-rootfs.img emulator-sysdata.img emulator-user.img이 들어있다.</p>
-<p>이 경우에는 qemu-img로 빌드 할때<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ~/tizen-sdk/tools/emulator/bin/qemu-img convert -O qcow2 emulator-rootfs.img emulator-sysdata.img emulator-user.img emulimg.3.0.x86</div></pre></td></tr></table></figure></p>
-<p>하면 제대로 런치화면에서 작동한다.</p>
-<ul>
-<li>빌드할때 자동으로 Emulator Image를 만들어주고 싶을때는<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gbs build -A i586 -R http://download.tizen.org/snapshots/tizen/ivi/latest/repos/emulator/packages/ --define <span class="string">"with emulator"</span> --overwrite --include-all</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<ul>
-<li>Mobile 버전의 경우는 emulator도 32/64bit 로 나뉘어져있다.</li>
-</ul>
-<ol>
-<li>Tizen SDK에서 img파일을 열어주면 된다!</li>
-</ol>
-<p><a href="https://wiki.tizen.org/wiki/Tizen_IVI_SDK" target="_blank" rel="external">https://wiki.tizen.org/wiki/Tizen_IVI_SDK</a></p>
-<p>출처: <a href="http://kisys.tistory.com/entry/Tizen-MIC를-이용한-Tizen-Image-만들기" target="_blank" rel="external">http://kisys.tistory.com/entry/Tizen-MIC를-이용한-Tizen-Image-만들기</a> [HelloWorld!]</p>
 
         </div>
         <footer class="article-footer">
@@ -203,7 +190,7 @@
 
 
 
-    <a data-url="https://youngi08.github.io/2015/06/13/tizen-MIC-make-image/" data-id="cj75w8uoq001dd5wrblbnskq5" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://youngi08.github.io/2017/09/04/9-user-certification/" data-id="cj75w8unc000cd5wruhmuxn4m" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -286,20 +273,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2015/07/22/tizen-v8-build/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            Tizen | v8 build하기
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2015/06/13/tizen-source-build/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/09/04/8-access-control-overview/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Tizen | Tizen 코드 설치 및 빌드 방법</p>
+        <p class="article-nav-title">보안 | 접근통제 개요</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -442,7 +419,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://youngi08.github.io/2015/06/13/tizen-MIC-make-image/';
+    var disqus_url = 'https://youngi08.github.io/2017/09/04/9-user-certification/';
     
     (function() {
     var dsq = document.createElement('script');
