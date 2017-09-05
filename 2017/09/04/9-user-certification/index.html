@@ -9,17 +9,17 @@
     
         <meta name="keywords" content="" />
     
-    <meta name="description" content="인증  메시지 인증  전달되는 메시지의 이상 유무를 확인할 수 있는 기능(무결성 검증) 전송 중 발생할 수 있는 메시지 내용 변경, 메시지 순서 변경, 메시지 삭제 여부를 확인하는 기능   사용자 인증  정당한 가입자의 접속인가를 확인하기 위한 사용자 인증이 컴퓨터 통신망 운영에 필수적 요건 사용자 인증의 유형* |      유형     |">
+    <meta name="description" content="인증  메시지 인증  전달되는 메시지의 이상 유무를 확인할 수 있는 기능(무결성 검증) 전송 중 발생할 수 있는 메시지 내용 변경, 메시지 순서 변경, 메시지 삭제 여부를 확인하는 기능   사용자 인증  정당한 가입자의 접속인가를 확인하기 위한 사용자 인증이 컴퓨터 통신망 운영에 필수적 요건 사용자 인증의 유형 type3과 type4를 묶어 type3 생체">
 <meta property="og:type" content="article">
 <meta property="og:title" content="보안 | 사용자 인증">
 <meta property="og:url" content="https://youngi08.github.io/2017/09/04/9-user-certification/index.html">
 <meta property="og:site_name" content="Hello">
-<meta property="og:description" content="인증  메시지 인증  전달되는 메시지의 이상 유무를 확인할 수 있는 기능(무결성 검증) 전송 중 발생할 수 있는 메시지 내용 변경, 메시지 순서 변경, 메시지 삭제 여부를 확인하는 기능   사용자 인증  정당한 가입자의 접속인가를 확인하기 위한 사용자 인증이 컴퓨터 통신망 운영에 필수적 요건 사용자 인증의 유형* |      유형     |">
+<meta property="og:description" content="인증  메시지 인증  전달되는 메시지의 이상 유무를 확인할 수 있는 기능(무결성 검증) 전송 중 발생할 수 있는 메시지 내용 변경, 메시지 순서 변경, 메시지 삭제 여부를 확인하는 기능   사용자 인증  정당한 가입자의 접속인가를 확인하기 위한 사용자 인증이 컴퓨터 통신망 운영에 필수적 요건 사용자 인증의 유형 type3과 type4를 묶어 type3 생체">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-09-04T08:28:35.000Z">
+<meta property="og:updated_time" content="2017-09-04T08:37:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="보안 | 사용자 인증">
-<meta name="twitter:description" content="인증  메시지 인증  전달되는 메시지의 이상 유무를 확인할 수 있는 기능(무결성 검증) 전송 중 발생할 수 있는 메시지 내용 변경, 메시지 순서 변경, 메시지 삭제 여부를 확인하는 기능   사용자 인증  정당한 가입자의 접속인가를 확인하기 위한 사용자 인증이 컴퓨터 통신망 운영에 필수적 요건 사용자 인증의 유형* |      유형     |">
+<meta name="twitter:description" content="인증  메시지 인증  전달되는 메시지의 이상 유무를 확인할 수 있는 기능(무결성 검증) 전송 중 발생할 수 있는 메시지 내용 변경, 메시지 순서 변경, 메시지 삭제 여부를 확인하는 기능   사용자 인증  정당한 가입자의 접속인가를 확인하기 위한 사용자 인증이 컴퓨터 통신망 운영에 필수적 요건 사용자 인증의 유형 type3과 type4를 묶어 type3 생체">
     
 
     
@@ -177,9 +177,67 @@
 <li><p>사용자 인증</p>
 <ul>
 <li>정당한 가입자의 접속인가를 확인하기 위한 사용자 인증이 컴퓨터 통신망 운영에 필수적 요건</li>
-<li><p>사용자 인증의 유형<br>*</p>
-<p>|      유형     |                 설명                     |        예          |<br>|:-:|:-:|:-:|<br>|  type1(지식)  | 주체는 그가 알고 있는 것을 보여줌               | 패스워드, 핀(PIN)    |<br>|  type2(소유)  | 주체는 그가 가지고 있는 것을 보여줌              | 토큰, 스마트 카드     |<br>|  type3(존재)  | 주체는 그를 나타내는 것을 보여줌                | 생체인증             |<br>|  type4(행위)  | 주체는 그가 하는 것을 보여줌                   | 서명, 움직임, 음성    |<br>|  Two Factor  | 위 타입 중에서 두 가지 인증 메커니즘을 결함하여 구현 | 토큰 + PIN         |<br>| Multi Factor | 가장 강한 인증으로 세 가지 이상의 인증 메커니즘 사용 | 토큰 + PIN + 지문인식 |</p>
+<li>사용자 인증의 유형<ul>
+<li>type3과 type4를 묶어 type3 생체인증이라 하기도 한다</li>
+</ul>
 </li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">유형</th>
+<th style="text-align:center">설명</th>
+<th style="text-align:center">예</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">type1(지식)</td>
+<td style="text-align:center">주체는 그가 알고 있는 것을 보여줌</td>
+<td style="text-align:center">패스워드, 핀(PIN)</td>
+</tr>
+<tr>
+<td style="text-align:center">type2(소유)</td>
+<td style="text-align:center">주체는 그가 가지고 있는 것을 보여줌</td>
+<td style="text-align:center">토큰, 스마트 카드</td>
+</tr>
+<tr>
+<td style="text-align:center">type3(존재)</td>
+<td style="text-align:center">주체는 그를 나타내는 것을 보여줌</td>
+<td style="text-align:center">생체인증</td>
+</tr>
+<tr>
+<td style="text-align:center">type4(행위)</td>
+<td style="text-align:center">주체는 그가 하는 것을 보여줌</td>
+<td style="text-align:center">서명, 움직임, 음성</td>
+</tr>
+<tr>
+<td style="text-align:center">Two Factor</td>
+<td style="text-align:center">위 타입 중에서 두 가지 인증 메커니즘을 결함하여 구현</td>
+<td style="text-align:center">토큰 + PIN</td>
+</tr>
+<tr>
+<td style="text-align:center">Multi Factor</td>
+<td style="text-align:center">가장 강한 인증으로 세 가지 이상의 인증 메커니즘 사용</td>
+<td style="text-align:center">토큰 + PIN + 지문인식</td>
+</tr>
+</tbody>
+</table>
+<h3 id="사용자-인증-기법"><a href="#사용자-인증-기법" class="headerlink" title="사용자 인증 기법"></a>사용자 인증 기법</h3><hr>
+<ul>
+<li><p>지식 기반 인증(What you know)</p>
+<ul>
+<li>사용자가 알고 있는 어떤 것에 의존하는 인증기법</li>
+<li>사용자는 신원을 입증하기 위한 신원정보 제공</li>
+<li>사용자에 의해 제공된 지식요인은 사용자 신분확인을 통하여 획든한 참조지식과 비교 -&gt; 일대일 검증</li>
+<li>보안성은 비밀번호의 크기와 랜덤성에 달려 있음</li>
+</ul>
+</li>
+<li><p>패스워드</p>
+<ul>
+<li>사용자가 시스템의 자원을 활용하기 위해 시스템에 접속하고자 할 때 사용 됨(로그인)</li>
 </ul>
 </li>
 </ul>
