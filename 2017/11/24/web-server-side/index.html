@@ -17,7 +17,7 @@
 <meta property="og:description" content="웹 서버  인터넷 웹브라우저의 요청이 들어오면 그에 해당하는 웹페이지를 찾아서 보내주는 일을 하는 컴퓨터를 지칭한다. 정확히 표현하면 인터넷 사용자의 URL요청을 받아서 그에 해당하는 웹페이지(HTML문서나 이미지)를 찾아서 다시 웹브라우저로 보내주는 것이다.   웹어플리케이션 서버(WAS)  웹어플리케이션 서버는 웹서버에 웹어플리케이션을 합친 것이다.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://youngi08.github.io/images/jsp.png">
-<meta property="og:updated_time" content="2017-11-24T09:26:54.962Z">
+<meta property="og:updated_time" content="2017-11-24T09:30:18.049Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Web | Server-Side 처리 과정">
 <meta name="twitter:description" content="웹 서버  인터넷 웹브라우저의 요청이 들어오면 그에 해당하는 웹페이지를 찾아서 보내주는 일을 하는 컴퓨터를 지칭한다. 정확히 표현하면 인터넷 사용자의 URL요청을 받아서 그에 해당하는 웹페이지(HTML문서나 이미지)를 찾아서 다시 웹브라우저로 보내주는 것이다.   웹어플리케이션 서버(WAS)  웹어플리케이션 서버는 웹서버에 웹어플리케이션을 합친 것이다.">
@@ -208,18 +208,18 @@
 <li>서블릿은 자바 소스로 작성된 클래스 파일 구조</li>
 <li><p>JSP는 서블릿 컨테이너에 의해 서블릿 형태의 자바 소스로 변환되어 클래스로 컴파일 됨</p>
 </li>
-<li><p>서블릿 컨테이너</p>
+<li><p><strong>서블릿 컨테이너</strong></p>
 <ul>
 <li>서블릿 컨테이너는 서블릿을 실행하고 JSP를 서블릿 코드로 변환하는 기능을 수행</li>
 <li><p>변환된 JSP의 서블릿 클래스를 실행하고 웹 서버의 메모리에 적재하고 사용자 요청에 따라 실행<br>예: Tomcat, WebLogic, JBoss, Jetty 등</p>
 </li>
-<li><p>HTTP 서버</p>
+<li><p><strong>HTTP 서버</strong></p>
 <ul>
 <li>URL 주소를 해석 하는 역활</li>
 <li>HTTP 서버는 단순히 어떤 주소(URL) 요청이 들어왔을 경우 그 주소에 미리 매핑되어 있는 콘텐츠(HTML 파일이나 이미지 등)를 사용자의 브라우저에 응답 형태로 전송하는 역할을 한다. 이 때 만일 요청된 URL이 서블릿 클래스 또는 JSP파일(ex. <a href="http://www.sevlet.com/servlet" target="_blank" rel="external">http://www.sevlet.com/servlet</a> 또는 <a href="http://www.servlet.com/home.jsp)일" target="_blank" rel="external">http://www.servlet.com/home.jsp)일</a> 경우 HTTP 서버는 이를 웹 컨테이너에서 처리하도록 클라이언트의 요청을 넘겨준다.</li>
 </ul>
 </li>
-<li>웹 컨테이너(Web Container)<ul>
+<li><strong>웹 컨테이너(Web Container)</strong><ul>
 <li>서블릿 클래스 또는 JSP 파일의 실행 요청을 처리해주역할</li>
 <li>웹 컨테이너에서는 요청된 URL에 맞는(미리 설정된) 서블릿 클래스 또는 JSP 파일을 실행하여 그 결과를 HTTP 서버에 넘겨주게 되고 이는 응답 메시지의 형태로 사용자의 브라우저에 전송된다.</li>
 </ul>
