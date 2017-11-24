@@ -3,17 +3,25 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Tag: odroid | Hello</title>
+    <title>Web | Server-Side 처리 과정 | Hello</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hello">
-<meta property="og:url" content="https://youngi08.github.io/tags/odroid/index.html">
+        <meta name="keywords" content="" />
+    
+    <meta name="description" content="웹 서버  인터넷 웹브라우저의 요청이 들어오면 그에 해당하는 웹페이지를 찾아서 보내주는 일을 하는 컴퓨터를 지칭한다. 정확히 표현하면 인터넷 사용자의 URL요청을 받아서 그에 해당하는 웹페이지(HTML문서나 이미지)를 찾아서 다시 웹브라우저로 보내주는 것이다.   웹어플리케이션 서버(WAS)  웹어플리케이션 서버는 웹서버에 웹어플리케이션을 합친 것이다.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Web | Server-Side 처리 과정">
+<meta property="og:url" content="https://youngi08.github.io/2017/11/24/web-server-side/index.html">
 <meta property="og:site_name" content="Hello">
+<meta property="og:description" content="웹 서버  인터넷 웹브라우저의 요청이 들어오면 그에 해당하는 웹페이지를 찾아서 보내주는 일을 하는 컴퓨터를 지칭한다. 정확히 표현하면 인터넷 사용자의 URL요청을 받아서 그에 해당하는 웹페이지(HTML문서나 이미지)를 찾아서 다시 웹브라우저로 보내주는 것이다.   웹어플리케이션 서버(WAS)  웹어플리케이션 서버는 웹서버에 웹어플리케이션을 합친 것이다.">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://youngi08.github.io/image/jsp.png">
+<meta property="og:updated_time" content="2017-11-24T09:11:01.228Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello">
+<meta name="twitter:title" content="Web | Server-Side 처리 과정">
+<meta name="twitter:description" content="웹 서버  인터넷 웹브라우저의 요청이 들어오면 그에 해당하는 웹페이지를 찾아서 보내주는 일을 하는 컴퓨터를 지칭한다. 정확히 표현하면 인터넷 사용자의 URL요청을 받아서 그에 해당하는 웹페이지(HTML문서나 이미지)를 찾아서 다시 웹브라우저로 보내주는 것이다.   웹어플리케이션 서버(WAS)  웹어플리케이션 서버는 웹서버에 웹어플리케이션을 합친 것이다.">
+<meta name="twitter:image" content="https://youngi08.github.io/image/jsp.png">
     
 
     
@@ -129,63 +137,222 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-tag"></i>Tag: <em>odroid</em>
+    <a class="page-title-link" href="/categories/web/">web</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/web/server/">server</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-web-server-side" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2017" class="archive-year"><i class="icon fa fa-calendar-o"></i>2017</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/odroid/">odroid</a>
-            </div>
-            <div class="date"><time datetime="2017-08-30T09:41:31.000Z" itemprop="datePublished">2017-08-30</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/30/odroid-porting-chromium/">odroid에 구글 크로미움 포팅하기</a>
+        Web | Server-Side 처리 과정
         </h1>
     
 
-        <p class="article-excerpt">
-            삽질한 것에 비해 굉장히 간단한 방법으로 할 수 있다. 여기에 몇 일을 날렸는가…ㅠㅠ먼저 원리를 제대로 이해하고 했으면 삽질이라고 할 수도 없을 만큼 빠른 시간 안에 할 수 있었을 것이다. 방향을 이상하게 잡아서 삽질하다 보니 굉장히 오래 걸리게 되었다.
-odroid xu3 보드에 크로미움을 포팅하기 위해서는 arm 32bit용으로 컴파일 해야 한다.
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/11/24/web-server-side/" class="article-date">
+            <time datetime="2017-11-24T08:46:13.000Z" itemprop="datePublished">2017-11-24</time>
+        </a>
+    </div>
 
-H
-        </p>
+                
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <ul>
+<li><p><strong>웹 서버</strong></p>
+<ul>
+<li>인터넷 웹브라우저의 요청이 들어오면 그에 해당하는 웹페이지를 찾아서 보내주는 일을 하는 컴퓨터를 지칭한다.</li>
+<li>정확히 표현하면 인터넷 사용자의 URL요청을 받아서 그에 해당하는 웹페이지(HTML문서나 이미지)를 찾아서 다시 웹브라우저로 보내주는 것이다.</li>
+</ul>
+</li>
+<li><p><strong>웹어플리케이션 서버(WAS)</strong></p>
+<ul>
+<li>웹어플리케이션 서버는 웹서버에 웹어플리케이션을 합친 것이다.</li>
+<li>우리가 웹페이지를 볼때 화면이 동적일 때가 있을 것이다. 동적이란 말은 이를테면 특정 URL을 요청했을 때 뉴스페이지 같은 곳에서는 각각의 기사에 대하여 다른 기사제목과 내용들이 표시 되는일들을 말하는데 정적인 웹 서버로는 이것을 처리가 불가능하다. 웹 서버가 웹어플리케이션 프로그램을 호출해야 가능한 일이다. JSP같은 기술이 웹어플리케이션의 역할을 담당한다.</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">  웹 서버 : 정적인 처리 담당 html, 이미지등     ex) Apache</div><div class="line">웹 어플리케이션 서버  (WAS) : jsp, 서블릿 담당(동적처리)    ex) Tomcat</div></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>JSP(Java Server Pages)</strong></p>
+<ul>
+<li>JSP 는 자바 Servlet 기술을 확장시켜 웹 환경 상에서 자바만으로 서버 사이드 모듈을 개발하기 위한 기술이다.</li>
+<li>JAVA기반으로 만들어서 JAVA의 모든 기능을 사용할 수 있어 발전 가능성이 무한하다.</li>
+<li>ASP, PHP 처럼 HTML 태그 사이 사이에 동적인 contents 생성 을 담당할 JAVA 코드가 들어 있는 형태로 Servlet 의 형태와 다른 모습을 취하고 있다.</li>
+<li>커스텀 태그를 만들어 사용할 수 있으며, JSTL(JSP Standard Tag Library)과 같은 태그 라이브러리를 이용할 수 있어 개발이 용이하다.</li>
+<li>서블릿으로 컴파일된 후 메모리에서 처리되기 때문에 많은 사용자의 접속도 원활하게 처리할 수 있디.</li>
+<li>Java Beans를 이용해 JSP 또는 다른 서블릿 간의 데이터를 쉽게 공유 할 수 있다.</li>
+</ul>
+</li>
+<li><p><strong>Servlat(Server + Applet)</strong></p>
+<ul>
+<li>JAVA를 이용한 서버 프로그래밍 기술이다.</li>
+<li>JAVA 언어를 기반으로 동적인 contents 를 생성하는 기술로 JAVA 프로그램을 작성하는 형식과 거의 같다.</li>
+<li>JAVA 코드 안에 HTML 태그가 섞여 있어 작업에 대한 분리적인 측면으로 볼 때 효율성이 떨어진다.</li>
+<li>프로그래머가 프로그래밍하기 어려우며 수정하기 어려운 단점이 있다.</li>
+</ul>
+</li>
+<li><p><strong>JSP와 서블릿 차이</strong></p>
+<ul>
+<li>JSP는 HTML과 같은 일반적인 텍스트 파일 구조</li>
+<li>서블릿은 자바 소스로 작성된 클래스 파일 구조</li>
+<li><p>JSP는 서블릿 컨테이너에 의해 서블릿 형태의 자바 소스로 변환되어 클래스로 컴파일 됨</p>
+</li>
+<li><p>서블릿 컨테이너</p>
+<ul>
+<li>서블릿 컨테이너는 서블릿을 실행하고 JSP를 서블릿 코드로 변환하는 기능을 수행</li>
+<li><p>변환된 JSP의 서블릿 클래스를 실행하고 웹 서버의 메모리에 적재하고 사용자 요청에 따라 실행<br>예: Tomcat, WebLogic, JBoss, Jetty 등</p>
+</li>
+<li><p>HTTP 서버</p>
+<ul>
+<li>URL 주소를 해석 하는 역활</li>
+<li>HTTP 서버는 단순히 어떤 주소(URL) 요청이 들어왔을 경우 그 주소에 미리 매핑되어 있는 콘텐츠(HTML 파일이나 이미지 등)를 사용자의 브라우저에 응답 형태로 전송하는 역할을 한다. 이 때 만일 요청된 URL이 서블릿 클래스 또는 JSP파일(ex. <a href="http://www.sevlet.com/servlet" target="_blank" rel="external">http://www.sevlet.com/servlet</a> 또는 <a href="http://www.servlet.com/home.jsp)일" target="_blank" rel="external">http://www.servlet.com/home.jsp)일</a> 경우 HTTP 서버는 이를 웹 컨테이너에서 처리하도록 클라이언트의 요청을 넘겨준다.</li>
+</ul>
+</li>
+<li>웹 컨테이너(Web Container)<ul>
+<li>서블릿 클래스 또는 JSP 파일의 실행 요청을 처리해주역할</li>
+<li>웹 컨테이너에서는 요청된 URL에 맞는(미리 설정된) 서블릿 클래스 또는 JSP 파일을 실행하여 그 결과를 HTTP 서버에 넘겨주게 되고 이는 응답 메시지의 형태로 사용자의 브라우저에 전송된다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>JSP 처리과정</strong><br><img src="/image/jsp.png" alt=""></p>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>사용자가 브라우저 주소창에 도메인을 입력하면 브라우저는 그 도메인에 해당하는 IP 주소를 찾기 위해서 DNS 서버에 접속한다.</li>
+<li>DNS 서버는 도메인에 대한 IP 주소를 알려준다.</li>
+<li>IP 주소를 획득한 브라우저는 인터넷에 접속해서 IP 주소에 있는 서버에 HTTP 프로토콜로 요청한다.</li>
+<li>웹 서버가 요청 내용을 분석하고 서블릿 컨테이너에 요청을 넘겨 처리한다</li>
+</ol>
+<ul>
+<li>HTML인 경우와 JSP인 경우 구분하여 처리한다.</li>
+<li>HTML인 경우 HTML, CSS 등등 추가적인 행위가 필요없는 정적인 파일을 찾아서 사용자에게 전달한다.</li>
+<li>JSP인 경우 웹 서버의 서블릿 컨테이너를 이용한 처리 과정이 필요하다.<ul>
+<li>찾은 파일을 서블릿으로 파싱한다.(hello.jsp -&gt; helloServlat.java)</li>
+<li>만약 이미 변환 되어있는 파일이 있다면 그 파일을 바로 실행한다. (helloServlat.class)</li>
+<li>이전에 요청했던 페이지일 경우 파싱할 필요 없이 파싱했던 클래스파일을 메모리에 적재한다.</li>
+<li>서블릿 파일을 실행가능한 class파일로 컴파일 한다. (helloServlat.java -&gt; helloServlat.class)  </li>
+<li>클래스 파일은 메모리에 적재가 되어 실행된다.</li>
+<li>컴파일된 .class는 컴퓨터에서 실행할 수 있는 형태로 특정한 기능을 수행할 수 있게 된다. 이후 소스 변경 전까지 해당 파일은 메모리에 상주하면서 다시 컴파일 되지 않고 서비스된다.</li>
+<li>데이터베이스 처리 혹은 별도의 기능을 위한 클래스 호출 등이 있다면 실행하고 결과를 취합한다. (Java Beans)</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>웹서버는 취합한 결과를 기반으로 브라우저가 인식할수 있는 정적페이지(HTML)를 구성하여 웹 브라우저에 전송한다.</li>
+</ol>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://youngi08.github.io/2017/11/24/web-server-side/" data-id="cjadov3d9001tmowrn2un01yw" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
+    </section>
 
 
                         </div>
                     </section>
                     <aside id="sidebar">
     <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/09/04/9-user-certification/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">보안 | 사용자 인증</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -323,11 +490,13 @@ H
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'https://youngi08.github.io/2017/11/24/web-server-side/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
