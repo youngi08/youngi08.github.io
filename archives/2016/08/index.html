@@ -3,23 +3,17 @@
 <head>
     <meta charset="utf-8">
     
-    <title>커널 | 커널 빌딩 시스템 | Hello</title>
+    <title>Archive: 2016/8 | Hello</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="" />
-    
-    <meta name="description" content="스케줄러, 파일시스템, 메모리 관리자, 네트워크 시스템 등의 수많은 서브 시스템들로 이우러진 커널은 빌딩(building)과정을 통해 zImage(bzImage)라는 부팅 가능한 단일 바이너리 파일로 만들어짐.  커널 빌딩 과정  커널 초기화 make distclean, mrproper   커널 설정 kbuild make menuconfig, gconfi">
-<meta property="og:type" content="article">
-<meta property="og:title" content="커널 | 커널 빌딩 시스템">
-<meta property="og:url" content="https://youngi08.github.io/2016/11/26/linux-kernel-build/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Hello">
+<meta property="og:url" content="https://youngi08.github.io/archives/2016/08/index.html">
 <meta property="og:site_name" content="Hello">
-<meta property="og:description" content="스케줄러, 파일시스템, 메모리 관리자, 네트워크 시스템 등의 수많은 서브 시스템들로 이우러진 커널은 빌딩(building)과정을 통해 zImage(bzImage)라는 부팅 가능한 단일 바이너리 파일로 만들어짐.  커널 빌딩 과정  커널 초기화 make distclean, mrproper   커널 설정 kbuild make menuconfig, gconfi">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-27T07:33:32.875Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="커널 | 커널 빌딩 시스템">
-<meta name="twitter:description" content="스케줄러, 파일시스템, 메모리 관리자, 네트워크 시스템 등의 수많은 서브 시스템들로 이우러진 커널은 빌딩(building)과정을 통해 zImage(bzImage)라는 부팅 가능한 단일 바이너리 파일로 만들어짐.  커널 빌딩 과정  커널 초기화 make distclean, mrproper   커널 설정 kbuild make menuconfig, gconfi">
+<meta name="twitter:title" content="Hello">
     
 
     
@@ -135,226 +129,63 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/linux/">linux</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/linux/kernel/">kernel</a>
+    <i class="icon fa fa-archive"></i>Archive: 2016/8
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-linux-kernel-build" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
+                            
+
+    
+    
         
-            <header class="article-header">
-                
+        
+        <section class="archives-wrap">
+            <div class="archive-year-wrap">
+                <a href="/archives/2016" class="archive-year"><i class="icon fa fa-calendar-o"></i>2016</a>
+            </div>
+            <div class="archives">
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/linux/">linux</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/linux/odroid/">odroid</a>
+            </div>
+            <div class="date"><time datetime="2016-08-30T09:41:31.000Z" itemprop="datePublished">2016-08-30</time></div>
+        </div>
+        
     
         <h1 class="article-title" itemprop="name">
-        커널 | 커널 빌딩 시스템
+        <a href="/2016/08/30/odroid-porting-chromium/">odroid에 구글 크로미움 포팅하기</a>
         </h1>
     
 
-            </header>
-        
-        
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <a href="/2016/11/26/linux-kernel-build/" class="article-date">
-            <time datetime="2016-11-26T06:41:17.000Z" itemprop="datePublished">2016-11-26</time>
-        </a>
-    </div>
+        <p class="article-excerpt">
+            삽질한 것에 비해 굉장히 간단한 방법으로 할 수 있다. 여기에 몇 일을 날렸는가…ㅠㅠ먼저 원리를 제대로 이해하고 했으면 삽질이라고 할 수도 없을 만큼 빠른 시간 안에 할 수 있었을 것이다. 방향을 이상하게 잡아서 삽질하다 보니 굉장히 오래 걸리게 되었다.
+odroid xu3 보드에 크로미움을 포팅하기 위해서는 arm 32bit용으로 컴파일 해야 한다.
 
-                
-            </div>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            <ul>
-<li>스케줄러, 파일시스템, 메모리 관리자, 네트워크 시스템 등의 수많은 서브 시스템들로 이우러진 커널은 빌딩(building)과정을 통해 zImage(bzImage)라는 부팅 가능한 단일 바이너리 파일로 만들어짐.</li>
-</ul>
-<h3 id="커널-빌딩-과정"><a href="#커널-빌딩-과정" class="headerlink" title="커널 빌딩 과정"></a>커널 빌딩 과정</h3><hr>
-<ul>
-<li>커널 초기화<ul>
-<li>make distclean, mrproper</li>
-</ul>
-</li>
-<li>커널 설정<ul>
-<li>kbuild</li>
-<li>make menuconfig, gconfig, xconfig</li>
-</ul>
-</li>
-<li>커널 빌딩<ul>
-<li>kconfig</li>
-<li>make all, zImage, modules</li>
-</ul>
-</li>
-<li>커널 설치<ul>
-<li>make install, modules_install</li>
-</ul>
-</li>
-</ul>
-<h3 id="커널-초기화"><a href="#커널-초기화" class="headerlink" title="커널 초기화"></a>커널 초기화</h3><hr>
-<ul>
-<li>tar.gz로 압축된 커널 소스를 압축 해제하면 커널 소스 트리 생성 -&gt; 커널 초기 상태</li>
-<li>maeke distclean, mrproper 명령어로 초기 상태로 되돌 릴 수 있음</li>
-<li>mrproper: “.config” 파일을 비롯하여 커널 컴파일 및 링킹을 위해 생성된 여러 가지 설정 파일들만을 지우도록 함</li>
-<li>distclean: mrproper 명령을 수행하고, 추가로 커널 컴파일 후 생성된 모든 오브젝트 파일, 백업 파일 등 삭제</li>
-<li>커널 설정</li>
-<li>자신의 시스템에 맞는 커널 요소들을 적절히 선택 함</li>
-<li>Makefile에서는 xconfig(QT 기반), menuconfig, gconfig(GTK 기반) 타킷 사용<ul>
-<li>script/kconfig/Makefile 에서 타깃 확인</li>
-</ul>
-</li>
-<li>arch/$(ARCH)/configs 디렉토리에 각 SoC에 맞게 미리 설정된 설정 파일 존재<ul>
-<li>make xxx_defconfig 명령어를 통해 make menuconfig를 통해 수동으로 설정해야하는 설정들을 자동으로 설정<ul>
-<li>결과로 자신만의 커널을 구성학디 위해 필요한 커널 설정 목록인 “.config” 생성</li>
-<li>“.config” : CONFIG_XXX라는 변수 값에 y,n,m 3개 상태로 설정된 목록으로 이러한 형태의 커널 설정 시스템을 kconfig라 함<ul>
-<li>y: 해당 바이너리가 vmlinux에 함께 링킹</li>
-<li>m: vmlinux와는 링킹이 이루어지지 않지만 모듈로서 컴파일 됨</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="커널-빌딩"><a href="#커널-빌딩" class="headerlink" title="커널 빌딩"></a>커널 빌딩</h3><hr>
-<ul>
-<li>kconfig를 이용한 커널 설정이 모두 완료되어 “.config”파일이 준비 되면 커널 빌딩 시작할 수 있음</li>
-<li>커널 빌딩이란 커널을 컴파일 하고 바이너리들을 링킹하여 단일 바이너리 파일인 zImage를 생성하는 일련의 과정을 말함</li>
-<li>vmliunux := head.o init.o init/ kernel/ mm/ fs/ ipc/ security/ crypto/ block/ usr/ lib/ drivers/ sound/ firmware/ net<ul>
-<li>위의 순서대로 링킹 되며 이를 통해서 vmlinux 바이너리 이미지 생성</li>
-</ul>
-</li>
-<li>vmlinux: 사용자가 정의한 모든 커널 컴포넌트들을 갖추고 있는 순수 커널 바이너리<ul>
-<li>바이너리 파일만으로는 시스템 구동 불가</li>
-<li>리눅스 커널 이미지를 메모리에 로드하여 실행 가능한 상태로 만들기 위해서는 부트스트랩 로더의 도움이 필요</li>
-<li>커널 빌드 시스템은 ELF형식의 vmlinux를 objcopy를  통하여 불필요한 색션들을 제거하고 압축하여 부트스트랩 로더와 링킹을 통해서 부팅 가능한 최종 바이너리인 zImage를 생성해 냄<ul>
-<li>컴파일 된 커널은 첫 결과물로 vmlinux라는 ELF 형식의 바이너리 생성<ul>
-<li>리눅스 소스 트리내의 모든 오브젝트 코드들로 이루어진 순수 커널 바이너리</li>
-</ul>
-</li>
-<li>vmlinux는 gzip에 의해 piggy.o로 압축되고 head.o, misc.o와 함께 링킹되어 최종적으로 zImage 바이너리 생성<ul>
-<li>head.o와 misc.o는 부트 스트랩 로더에 해당하여 압축된 vmlinux(piggy.o)를 메모리에 적재하고 압축을 풀어주는 작업을 수행 하는 코드</li>
-</ul>
-</li>
-<li>이렇게 압축된 zImage를 통해 커널 메모리 적재 및 실행 빠르게 진행</li>
-</ul>
-</li>
-<li>이러한 과정은 arch/arm/Makefile을 통해 이루어짐</li>
-</ul>
-</li>
-</ul>
-<h3 id="커널-설치"><a href="#커널-설치" class="headerlink" title="커널 설치"></a>커널 설치</h3><hr>
-<ul>
-<li>위의 과정을 거쳐 생성된 커널 이미지를 적절한 곳에 위치시키기 위해 install.sh를 통해 $(INSTALL_PATH)에 해당하는 경로에 커널 이미지를 옮기는 일 수행</li>
-</ul>
-
-        </div>
-        <footer class="article-footer">
-            
-
-
-
-    <a data-url="https://youngi08.github.io/2016/11/26/linux-kernel-build/" data-id="cjahxf6d5001hnewrme07xc7f" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-        </footer>
+H
+        </p>
     </div>
 </article>
-
-    <section id="comments">
     
-        
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-
+        </div>
     
-    </section>
+
+
+    </div></section>
+
 
 
                         </div>
                     </section>
                     <aside id="sidebar">
     <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
-    
-        
-<nav id="article-nav">
-    
-        <a href="/2017/08/30/markdown-grammer/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            Hexo | 마크 다운 문법 정리
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
-    
-    
-        <a href="/2016/10/24/linux-kernel-module/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">커널 | 모듈 만들기</p>
-        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
-        </a>
-    
-</nav>
-
     
     <div class="widgets-container">
         
@@ -492,13 +323,11 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://youngi08.github.io/2016/11/26/linux-kernel-build/';
-    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
