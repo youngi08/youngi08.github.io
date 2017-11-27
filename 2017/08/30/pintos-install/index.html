@@ -3,17 +3,24 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Category: odroid | Hello</title>
+    <title>Pintos | 핀토스(pintos) 설치과정 | Hello</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hello">
-<meta property="og:url" content="https://youngi08.github.io/categories/odroid/index.html">
+        <meta name="keywords" content="pintos" />
+    
+    <meta name="description" content="What is pintos?우선 pintos는 80x86 아키텍처로 구성된 간단한 운영체제이다.스탠포드 대학에서 교육용으로 만들어졌으며 kernel thread(커널 스레드), loading and running user programs(유저 프로그램을 로딩하고 실행하는것), file system(파일 시스템)을 지원하고 있다.추가적으로 virtual m">
+<meta name="keywords" content="pintos">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pintos | 핀토스(pintos) 설치과정">
+<meta property="og:url" content="https://youngi08.github.io/2017/08/30/pintos-install/index.html">
 <meta property="og:site_name" content="Hello">
+<meta property="og:description" content="What is pintos?우선 pintos는 80x86 아키텍처로 구성된 간단한 운영체제이다.스탠포드 대학에서 교육용으로 만들어졌으며 kernel thread(커널 스레드), loading and running user programs(유저 프로그램을 로딩하고 실행하는것), file system(파일 시스템)을 지원하고 있다.추가적으로 virtual m">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-11-27T03:35:54.048Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello">
+<meta name="twitter:title" content="Pintos | 핀토스(pintos) 설치과정">
+<meta name="twitter:description" content="What is pintos?우선 pintos는 80x86 아키텍처로 구성된 간단한 운영체제이다.스탠포드 대학에서 교육용으로 만들어졌으며 kernel thread(커널 스레드), loading and running user programs(유저 프로그램을 로딩하고 실행하는것), file system(파일 시스템)을 지원하고 있다.추가적으로 virtual m">
     
 
     
@@ -129,64 +136,178 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-folder-open"></i>Category: <em class="page-title-link">odroid</em>
+    <a class="page-title-link" href="/categories/linux/">linux</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-pintos-install" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2017" class="archive-year"><i class="icon fa fa-calendar-o"></i>2017</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/odroid/">odroid</a>
-            </div>
-            <div class="date"><time datetime="2017-08-30T09:41:31.000Z" itemprop="datePublished">2017-08-30</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/30/odroid-porting-chromium/">odroid에 구글 크로미움 포팅하기</a>
+        Pintos | 핀토스(pintos) 설치과정
         </h1>
     
 
-        <p class="article-excerpt">
-            삽질한 것에 비해 굉장히 간단한 방법으로 할 수 있다. 여기에 몇 일을 날렸는가…ㅠㅠ먼저 원리를 제대로 이해하고 했으면 삽질이라고 할 수도 없을 만큼 빠른 시간 안에 할 수 있었을 것이다. 방향을 이상하게 잡아서 삽질하다 보니 굉장히 오래 걸리게 되었다.
-odroid xu3 보드에 크로미움을 포팅하기 위해서는 arm 32bit용으로 컴파일 해야 한다.
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/08/30/pintos-install/" class="article-date">
+            <time datetime="2017-08-30T09:41:31.000Z" itemprop="datePublished">2017-08-30</time>
+        </a>
+    </div>
 
-H
-        </p>
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/pintos/">pintos</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <ol>
+<li>What is pintos?<br>우선 pintos는 80x86 아키텍처로 구성된 간단한 운영체제이다.<br>스탠포드 대학에서 교육용으로 만들어졌으며 kernel thread(커널 스레드), loading and running user programs(유저 프로그램을 로딩하고 실행하는것), file system(파일 시스템)을 지원하고 있다.<br>추가적으로 virtual memory (가상메모리)구현도 추가할 수 있다.</li>
+</ol>
+<p>pintos는 기본적으로 IBM-compatible PC에서 실행되도록 구현되어있기 때문에 80x86 CPU에서 실행될 수 있다.<br>만일 SPARC machine과 같은 다른 환경에서 실행 할 경우에는 “Cross-compiler” 툴을 사용하여 컴파일 해줘야 한다.</p>
+<p>Pintos Project 공식 Document : <a href="http://web.stanford.edu/class/cs140/projects/pintos/pintos.html" target="_blank" rel="external">http://web.stanford.edu/class/cs140/projects/pintos/pintos.html</a></p>
+<ol>
+<li>Install Ubuntu<br>pintos를 실행하기 위해 Ubuntu 등 리눅스 환경을 설치한다.<br>나는 기본적으로 Ubuntu를 사용하지만 다른 OS환경의 사용자들은 VM을 이용해서 설치하면 된다.</li>
+</ol>
+<p>*필수 유틸리티를 설치 해줘야 한다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-get install g++ xorg-dev ncurses-dev vim</div></pre></td></tr></table></figure></p>
+<ol>
+<li>Install Pintos<br>이제 본격적으로 pintos를 설치하는 작업을 한다.<br>3-1. pintos 코드 다운 및 압축풀기<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ wget http://www.stanford.edu/class/cs140/projects/pintos/pintos.tar.gz</div><div class="line">$ tar xzf pintos.tar.gz</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>pintos 파일 압축을 해제하면 “pintos/src”파일이 생성되고, 그 안에 pintos 소스가 존재한다.</p>
+<p>3-2. bashrc 환경설정 변경<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ vi ~/.bashrc</div><div class="line">맨 아래에 <span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$PATH</span>:/home/usr/pintos/src/utils"</span> 추가</div><div class="line">(usr는 자신의 컴퓨터의 username을 적어주면 된다.)</div><div class="line"></div><div class="line">$ <span class="built_in">source</span> ~/.bashrc</div><div class="line">(원래 .bashrc 파일을 수정하면 터미널을 껏다 켜야 하지만 이 명령어를 사용하면 바로 수정사항이 적용된다.)</div></pre></td></tr></table></figure></p>
+<ol>
+<li>Install Simulator</li>
+</ol>
+<p>4-1.  Bochs 다운로드하기<br>pintos는 Bochs나 QEMU와 같은 simulator를 사용하여 실행한다.<br>Document에서는 Bochs를 이용해서 설명하기 때문에 Bochs를 사용한다.<br>Bochs 다운은 여기서 할 수 있다.<br><a href="http://bochs.sourceforge.net" target="_blank" rel="external">http://bochs.sourceforge.net</a></p>
+<p>bochs-2.6.7.tar.gz (이 버전에서는 gdb 컴파일이 안된다.)<br> -&gt; bochs-2.2.6.tar.gz로 사용!</p>
+<p>4-2. pintos 내부 스크립트 이용해 bochs 설치하기<br>pintos/src/misc에서</p>
+<p>ex) sudo env SRCDIR=/home/usr/Downlaods/ PINTOSDIR=/home/usr/pintos/ DSTDIR=/usr/local ./bochs-2.2.6-build.sh<br> SRCDIR= 다운로드한 bochs tar.gz 파일이 있는 디렉토리<br> PINTOSDIR= pintos 루트 디렉토리</p>
+<ul>
+<li>pwd 명령어를 이용해 디렉토리 경로 확인 가능</li>
+</ul>
+<p>4-3 pintods-gdb 세팅<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"> $ vim pintos/src/utils/pintos-gdb</div><div class="line"><span class="comment">#Path to GDB macros file. 경로 수정!</span></div><div class="line">GDBMACROS=/home/user/pinots/src/misc/gdb-macros</div></pre></td></tr></table></figure></p>
+<p>4-4. Test<br>핀토스가 제대로 작동하는지 테스트를 한다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> pintos/src/threads</div><div class="line">$ make    //build 디렉토리 생성</div><div class="line">$ <span class="built_in">cd</span> build</div><div class="line">$ pintos run alarm-multiple</div></pre></td></tr></table></figure></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://youngi08.github.io/2017/08/30/pintos-install/" data-id="cjahn5i8k0000qlwry1ccjjqi" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
-
+    </section>
 
 
                         </div>
                     </section>
                     <aside id="sidebar">
     <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2017/08/30/odroid-porting-chromium/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            odroid에 구글 크로미움 포팅하기
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2017/08/30/markdown-grammer/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Hexo | 마크 다운 문법 정리</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -324,11 +445,13 @@ H
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'https://youngi08.github.io/2017/08/30/pintos-install/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
