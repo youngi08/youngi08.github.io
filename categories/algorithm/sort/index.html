@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Category: Sort | Hello</title>
+    <title>Category: sort | Hello</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta property="og:type" content="website">
 <meta property="og:title" content="Hello">
-<meta property="og:url" content="https://youngi08.github.io/categories/Algorithm/Sort/index.html">
+<meta property="og:url" content="https://youngi08.github.io/categories/algorithm/sort/index.html">
 <meta property="og:site_name" content="Hello">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
@@ -129,7 +129,7 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-folder-open"></i>Category: <em class="page-title-link">Sort</em>
+    <i class="icon fa fa-folder-open"></i>Category: <em class="page-title-link">sort</em>
     </h1>
 </div>
                         <div class="main-body-content">
@@ -154,58 +154,27 @@
         
         <div class="article-meta">
             <div class="category">
-            <a class="article-category-link" href="/categories/Algorithm/">Algorithm</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Algorithm/Sort/">Sort</a>
+            <a class="article-category-link" href="/categories/algorithm/">algorithm</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/algorithm/sort/">sort</a>
             </div>
-            <div class="date"><time datetime="2017-08-31T06:08:32.000Z" itemprop="datePublished">2017-08-31</time></div>
+            <div class="date"><time datetime="2017-08-31T05:41:31.000Z" itemprop="datePublished">2017-08-31</time></div>
         </div>
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/31/algorithm-selection-sort/">알고리즘 | 선택정렬</a>
+        <a href="/2017/08/31/algorithm-insert-sort/">알고리즘 | 삽입정렬</a>
         </h1>
     
 
         <p class="article-excerpt">
-            선택 정렬(Selection Sort)
+            삽입정렬(Insert Sort)
 
-정렬 되지 않은 데이터들에 대해 가장 작은 데이터를 찾아 가장 앞의 데이터와 교환해나가는 방식
-선택 정렬의 비교 횟수= (n-1) + (n-2) + (n-3) + … + 1= n(n-1)/2
+데이터 집합을 순회하면서 정렬이 필요한 요소를 뽑아내어 이를 다시 적당한 곳에 삽입해 나가는 알고리즘
+아직 정렬 되지 않은 임의의 데이터를 이미 정렬 된 부분의 적절한 위치에 삽입해가며 정렬하는 방식
+
 시간 복잡도
-평균, 최악, 최고: O(n^2)
-기존의 레코드들이 정렬이 되어 있던, 되어 있지 않던 상관 없이 레코드들의 가장
-        </p>
-    </div>
-</article>
-    
 
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Algorithm/">Algorithm</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Algorithm/Sort/">Sort</a>
-            </div>
-            <div class="date"><time datetime="2017-08-31T04:01:03.000Z" itemprop="datePublished">2017-08-31</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/31/algorithm-bubbule-sort/">알고리즘 | 버블정렬</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            버블정렬(Bubble Sort)
-
-데이터 집합을 순회하면서 집합 내의 이웃 요소들끼리의 교환을 통해 정렬을 수행
-제일 큰 원소를 오른쪽으로 옮기는 방법
-버블 정렬의 비교 횟수= (n-1)+(n-2)+…+(n-(n-2))+(n-(n-1))= (n-1)+(n-2)+…+3+2+1 = (n-1)(n/2)비교횟수 T(n)= (n(n-1))/2
-시간복잡도
-평균, 최악
+최선
+list가 이미 정렬 되어 있는 경우에는 외부 루프 n-1번만 실행되고 각 단계에서 데이터의 이동 없이
         </p>
     </div>
 </article>
@@ -363,6 +332,40 @@
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
+.type = 'text/javascript';
     dsq.async = true;
     dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
