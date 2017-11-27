@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Hello">
 <meta property="og:description" content="유클리드 알고리즘 (최대공약수) 최대 공약수A = aG; (280 = 2810)B = bG; (30 = 310) A-B = aG - bG = (a-b) * G(a-b) 와 b는 역시 서로소 이므로 A-B와 B의 최대 공약수는 역시 G [뺄셈 이용] -&amp;gt; 성능 최악  임의의 두 정수 u와 v를 입력 받는다 v가 u보다 크다면 v와 u의 값을 교환한다 u">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-27T08:03:12.055Z">
+<meta property="og:updated_time" content="2017-11-27T08:03:40.031Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="알고리즘 | 유클리드 알고리즘(최대공약수)">
 <meta name="twitter:description" content="유클리드 알고리즘 (최대공약수) 최대 공약수A = aG; (280 = 2810)B = bG; (30 = 310) A-B = aG - bG = (a-b) * G(a-b) 와 b는 역시 서로소 이므로 A-B와 B의 최대 공약수는 역시 G [뺄셈 이용] -&amp;gt; 성능 최악  임의의 두 정수 u와 v를 입력 받는다 v가 u보다 크다면 v와 u의 값을 교환한다 u">
@@ -187,10 +187,11 @@
 <li>임이의 두 정수 u와 v를 입력 받는다</li>
 <li>v가 0인가?  <ul>
 <li>0이면 v가 최대 공약수이다 끝   </li>
-<li>0이 아니면 2.1 u에 u%v를 대입한다<br>2.2 u와 v의 값을 교환한다</li>
+<li>0이 아니면 2.1 u에 u%v를 대입한다</li>
 </ul>
 </li>
 </ol>
+<p>2.2 u와 v의 값을 교환한다</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">get_modulus</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> v)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">int</span> t;</div><div class="line">    <span class="keyword">while</span>(v)&#123;</div><div class="line">        t = u%v;</div><div class="line">        u = v;</div><div class="line">        v = t;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> u;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><strong>[재귀 방법]</strong><br> 속도는 나머지를 이용하는 방법보다 느리지만 소스코드의 간결 장점</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd_recursion</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> v)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">if</span>(v == <span class="number">0</span>)    <span class="keyword">return</span> u;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">return</span> gcd_recursion(v, u%v);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
