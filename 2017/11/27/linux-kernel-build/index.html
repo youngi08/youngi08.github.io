@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Hello">
 <meta property="og:description" content="스케줄러, 파일시스템, 메모리 관리자, 네트워크 시스템 등의 수많은 서브 시스템들로 이우러진 커널은 빌딩(building)과정을 통해 zImage(bzImage)라는 부팅 가능한 단일 바이너리 파일로 만들어짐.  커널 빌딩 과정  커널 초기화 make distclean, mrproper   커널 설정 kbuild make menuconfig, gconfi">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-27T07:18:07.239Z">
+<meta property="og:updated_time" content="2017-11-27T07:20:01.918Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="커널 | 커널 빌딩 시스템">
 <meta name="twitter:description" content="스케줄러, 파일시스템, 메모리 관리자, 네트워크 시스템 등의 수많은 서브 시스템들로 이우러진 커널은 빌딩(building)과정을 통해 zImage(bzImage)라는 부팅 가능한 단일 바이너리 파일로 만들어짐.  커널 빌딩 과정  커널 초기화 make distclean, mrproper   커널 설정 kbuild make menuconfig, gconfi">
@@ -207,7 +207,7 @@
 <li>결과로 자신만의 커널을 구성학디 위해 필요한 커널 설정 목록인 “.config” 생성</li>
 <li>“.config” : CONFIG_XXX라는 변수 값에 y,n,m 3개 상태로 설정된 목록으로 이러한 형태의 커널 설정 시스템을 kconfig라 함<ul>
 <li>y: 해당 바이너리가 vmlinux에 함께 링킹</li>
-<li>m: vmlinux와는 링킹이 이루어지지 않지만 모듈로서 컴파일 됨<h3 id="커널-빌딩"><a href="#커널-빌딩" class="headerlink" title="커널 빌딩"></a>커널 빌딩</h3></li>
+<li>m: vmlinux와는 링킹이 이루어지지 않지만 모듈로서 컴파일 됨</li>
 </ul>
 </li>
 </ul>
@@ -215,7 +215,7 @@
 </ul>
 </li>
 </ul>
-<hr>
+<h3 id="커널-빌딩"><a href="#커널-빌딩" class="headerlink" title="커널 빌딩"></a>커널 빌딩</h3><hr>
 <ul>
 <li>kconfig를 이용한 커널 설정이 모두 완료되어 “.config”파일이 준비 되면 커널 빌딩 시작할 수 있음</li>
 <li>커널 빌딩이란 커널을 컴파일 하고 바이너리들을 링킹하여 단일 바이너리 파일인 zImage를 생성하는 일련의 과정을 말함</li>
