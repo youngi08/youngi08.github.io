@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Hello">
 <meta property="og:description" content="스케줄러, 파일시스템, 메모리 관리자, 네트워크 시스템 등의 수많은 서브 시스템들로 이우러진 커널은 빌딩(building)과정을 통해 zImage(bzImage)라는 부팅 가능한 단일 바이너리 파일로 만들어짐.  커널 빌딩 과정  커널 초기화 make distclean, mrproper   커널 설정 kbuild make menuconfig, gconfi">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-27T07:20:01.918Z">
+<meta property="og:updated_time" content="2017-11-27T07:22:23.782Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="커널 | 커널 빌딩 시스템">
 <meta name="twitter:description" content="스케줄러, 파일시스템, 메모리 관리자, 네트워크 시스템 등의 수많은 서브 시스템들로 이우러진 커널은 빌딩(building)과정을 통해 zImage(bzImage)라는 부팅 가능한 단일 바이너리 파일로 만들어짐.  커널 빌딩 과정  커널 초기화 make distclean, mrproper   커널 설정 kbuild make menuconfig, gconfi">
@@ -238,11 +238,11 @@
 <li>이렇게 압축된 zImage를 통해 커널 메모리 적재 및 실행 빠르게 진행</li>
 </ul>
 </li>
-<li>이러한 과정은 arch/arm/Makefile을 통해 이루어짐<h3 id="커널-설치"><a href="#커널-설치" class="headerlink" title="커널 설치"></a>커널 설치</h3></li>
+<li>이러한 과정은 arch/arm/Makefile을 통해 이루어짐</li>
 </ul>
 </li>
 </ul>
-<hr>
+<h3 id="커널-설치"><a href="#커널-설치" class="headerlink" title="커널 설치"></a>커널 설치</h3><hr>
 <ul>
 <li>위의 과정을 거쳐 생성된 커널 이미지를 적절한 곳에 위치시키기 위해 install.sh를 통해 $(INSTALL_PATH)에 해당하는 경로에 커널 이미지를 옮기는 일 수행</li>
 </ul>
