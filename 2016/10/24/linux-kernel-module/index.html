@@ -3,17 +3,23 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Archive: 2017/10 | Hello</title>
+    <title>linux-kernel-module | Hello</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hello">
-<meta property="og:url" content="https://youngi08.github.io/archives/2017/10/index.html">
+        <meta name="keywords" content="" />
+    
+    <meta name="description" content="[Makefile 생성]12345678TARGET = pid_test.koobj-m = pid_test.oKDIRS = /usr/src/linux_v6PWD = $(shell pwd)default:        $(MAKE) -C $(KDIRS) SUBDIRS=$(PWD) modulesclean:        $(MAKE) -C $(KDIRS) SUBDIR">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux-kernel-module">
+<meta property="og:url" content="https://youngi08.github.io/2016/10/24/linux-kernel-module/index.html">
 <meta property="og:site_name" content="Hello">
+<meta property="og:description" content="[Makefile 생성]12345678TARGET = pid_test.koobj-m = pid_test.oKDIRS = /usr/src/linux_v6PWD = $(shell pwd)default:        $(MAKE) -C $(KDIRS) SUBDIRS=$(PWD) modulesclean:        $(MAKE) -C $(KDIRS) SUBDIR">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-11-27T07:34:24.150Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello">
+<meta name="twitter:title" content="linux-kernel-module">
+<meta name="twitter:description" content="[Makefile 생성]12345678TARGET = pid_test.koobj-m = pid_test.oKDIRS = /usr/src/linux_v6PWD = $(shell pwd)default:        $(MAKE) -C $(KDIRS) SUBDIRS=$(PWD) modulesclean:        $(MAKE) -C $(KDIRS) SUBDIR">
     
 
     
@@ -129,60 +135,155 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-archive"></i>Archive: 2017/10
+    <a class="page-title-link" href="/categories/linux/">linux</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/linux/kernel/">kernel</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-linux-kernel-module" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2017" class="archive-year"><i class="icon fa fa-calendar-o"></i>2017</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/linux/">linux</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/linux/kernel/">kernel</a>
-            </div>
-            <div class="date"><time datetime="2017-10-24T07:31:32.000Z" itemprop="datePublished">2017-10-24</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/10/24/linux-kernel-module/">linux-kernel-module</a>
+        linux-kernel-module
         </h1>
     
 
-        <p class="article-excerpt">
-            [Makefile 생성]12345678TARGET = pid_test.koobj-m = pid_test.oKDIRS = /usr/src/linux_v6PWD = $(shell pwd)default:        $(MAKE) -C $(KDIRS) SUBDIRS=$(PWD) modulesclean:        $(MAKE) -C $(KDIRS) SUBDIR
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2016/10/24/linux-kernel-module/" class="article-date">
+            <time datetime="2016-10-24T07:31:32.000Z" itemprop="datePublished">2016-10-24</time>
+        </a>
+    </div>
+
+                
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p><strong>[Makefile 생성]</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">TARGET = pid_test.ko</div><div class="line">obj-m = pid_test.o</div><div class="line">KDIRS = /usr/src/linux_v6</div><div class="line">PWD = $(shell <span class="built_in">pwd</span>)</div><div class="line">default:</div><div class="line">        $(MAKE) -C $(KDIRS) SUBDIRS=$(PWD) modules</div><div class="line">clean:</div><div class="line">        $(MAKE) -C $(KDIRS) SUBDIRS=$(PWD) clean</div></pre></td></tr></table></figure></p>
+<p><strong>[실행 방법]</strong><br>$ make<br>실행하면  ~.o 파일이 생성되는데, 이것이 모듈파일<br>모듈 파일 실행을 위해서는 커널에 적재해야 함</p>
+<p>$ insmod test.ko<br>커널 메시지 출력</p>
+<p>$ dmesg<br>커널 모듈 확인</p>
+<p>$ lsmod<br>커널 모듈 제거</p>
+<p>$ rmmod test</p>
+<p>$ make clean<br>컴파일 결과로 생성된 파일 제거</p>
+<p><strong>[모듈 초기화/제거 함수]</strong><br>module_init(hello_init);<br>module_exit(hello_exit);</p>
+<p><strong>[커널 메시지 출력]</strong><br>printk()</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://youngi08.github.io/2016/10/24/linux-kernel-module/" data-id="cjahvna9e0017ydwrfqk68bn5" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
+    </section>
 
 
                         </div>
                     </section>
                     <aside id="sidebar">
     <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/11/26/linux-kernel-build/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            커널 | 커널 빌딩 시스템
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2016/02/18/chromium-presentation/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Chromium과 웹킷의 구조 설명 잘 된 자료들!</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -223,9 +324,9 @@
                     <li>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/linux/">linux</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/linux/kernel/">kernel</a></p>
-                            <p class="item-title"><a href="/2017/10/24/linux-kernel-module/" class="title">linux-kernel-module</a></p>
-                            <p class="item-date"><time datetime="2017-10-24T07:31:32.000Z" itemprop="datePublished">2017-10-24</time></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/security/">security</a></p>
+                            <p class="item-title"><a href="/2017/09/04/9-user-certification/" class="title">보안 | 사용자 인증</a></p>
+                            <p class="item-date"><time datetime="2017-09-04T05:57:08.000Z" itemprop="datePublished">2017-09-04</time></p>
                         </div>
                     </li>
                 
@@ -233,8 +334,8 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/security/">security</a></p>
-                            <p class="item-title"><a href="/2017/09/04/9-user-certification/" class="title">보안 | 사용자 인증</a></p>
-                            <p class="item-date"><time datetime="2017-09-04T05:57:08.000Z" itemprop="datePublished">2017-09-04</time></p>
+                            <p class="item-title"><a href="/2017/09/04/8-access-control-overview/" class="title">보안 | 접근통제 개요</a></p>
+                            <p class="item-date"><time datetime="2017-09-04T05:29:25.000Z" itemprop="datePublished">2017-09-04</time></p>
                         </div>
                     </li>
                 
@@ -320,11 +421,13 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'https://youngi08.github.io/2016/10/24/linux-kernel-module/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
