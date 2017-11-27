@@ -3,17 +3,25 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Category: Hexo | Hello</title>
+    <title>web-jsp-model-and-mvc | Hello</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hello">
-<meta property="og:url" content="https://youngi08.github.io/categories/Web/Hexo/index.html">
+        <meta name="keywords" content="" />
+    
+    <meta name="description" content="MVC 패턴  Model 데이터베이스와의 관계를 담당한다. 클라이언트(웹브라우저)의 요청에서 필요한 자료를 데이터베이스로부터 추출하거나 수정하여 Controller로 전달한다. DAO(Data Access Object) : sql문으로 질의응답 하는 클래스 DTO(Data Transe Object) : 데이터의 틀을 만들고 저장하는 클래스   View 사용">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web-jsp-model-and-mvc">
+<meta property="og:url" content="https://youngi08.github.io/2017/11/27/web-jsp-model-and-mvc/index.html">
 <meta property="og:site_name" content="Hello">
+<meta property="og:description" content="MVC 패턴  Model 데이터베이스와의 관계를 담당한다. 클라이언트(웹브라우저)의 요청에서 필요한 자료를 데이터베이스로부터 추출하거나 수정하여 Controller로 전달한다. DAO(Data Access Object) : sql문으로 질의응답 하는 클래스 DTO(Data Transe Object) : 데이터의 틀을 만들고 저장하는 클래스   View 사용">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://youngi08.github.io/2017/11/27/web-jsp-model-and-mvc/images/model1.png">
+<meta property="og:updated_time" content="2017-11-27T05:59:40.882Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello">
+<meta name="twitter:title" content="web-jsp-model-and-mvc">
+<meta name="twitter:description" content="MVC 패턴  Model 데이터베이스와의 관계를 담당한다. 클라이언트(웹브라우저)의 요청에서 필요한 자료를 데이터베이스로부터 추출하거나 수정하여 Controller로 전달한다. DAO(Data Access Object) : sql문으로 질의응답 하는 클래스 DTO(Data Transe Object) : 데이터의 틀을 만들고 저장하는 클래스   View 사용">
+<meta name="twitter:image" content="https://youngi08.github.io/2017/11/27/web-jsp-model-and-mvc/images/model1.png">
     
 
     
@@ -129,85 +137,185 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-folder-open"></i>Category: <em class="page-title-link">Hexo</em>
+    uncategorized
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-web-jsp-model-and-mvc" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2017" class="archive-year"><i class="icon fa fa-calendar-o"></i>2017</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Web/Hexo/">Hexo</a>
-            </div>
-            <div class="date"><time datetime="2017-08-30T08:28:01.000Z" itemprop="datePublished">2017-08-30</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/30/markdown-grammer/">Hexo | 마크 다운 문법 정리</a>
+        web-jsp-model-and-mvc
         </h1>
     
 
-        <p class="article-excerpt">
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/11/27/web-jsp-model-and-mvc/" class="article-date">
+            <time datetime="2017-11-27T05:52:06.000Z" itemprop="datePublished">2017-11-27</time>
+        </a>
+    </div>
+
+                
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h3 id="MVC-패턴"><a href="#MVC-패턴" class="headerlink" title="MVC 패턴"></a>MVC 패턴</h3><hr>
+<ul>
+<li>Model<ul>
+<li>데이터베이스와의 관계를 담당한다. 클라이언트(웹브라우저)의 요청에서 필요한 자료를 데이터베이스로부터 추출하거나 수정하여 Controller로 전달한다.</li>
+<li>DAO(Data Access Object) : sql문으로 질의응답 하는 클래스</li>
+<li>DTO(Data Transe Object) : 데이터의 틀을 만들고 저장하는 클래스</li>
+</ul>
+</li>
+<li>View<ul>
+<li>사용자한테 보여지는 UI화면이다. Controller에서 어떤 view 컴포넌트를 보여줄지 결정한다.</li>
+<li>주로 .jsp로 작성한다.</li>
+</ul>
+</li>
+<li>Controller<ul>
+<li>클라이언트(웹브라우저)의 요청을 받고 적절한 Model에 지시를 내리며 Model에 전달된 데이터를 적절한 view에 전달 한다.</li>
+<li>매니저 같은 역할로 클라이언트로부터 요청받으면 이 요청이 그냥 보여주면되는건지 DB를 거쳐 보여야하는건지 판단하고 알맞게 작업진행을 한다.</li>
+</ul>
+</li>
+</ul>
+<h3 id="모델1"><a href="#모델1" class="headerlink" title="모델1"></a>모델1</h3><hr>
+<p><img src="images/model1.png" alt="모델1"></p>
+<ul>
+<li>JSP, Servelt, Bean 등으로 구성되는 형태로 JSP에는 프리젠테이션 레이어 &amp; 비즈니스 레이어를 포함하고 업무부분을 JavaBean이나 Servlet에서 구현하기도 한다.</li>
+<li>Model - View - Controller로 구분하기 모호하긴하지만 궂이 따지자면 JSP에서는 주로 View와 Controller의 역할을 JavaBean / Servlet에서는 주로 Model의 역할을 하지만Controller의 역할을 하기도 한다.</li>
+<li>장점<ul>
+<li>페이지 흐름이 단순해 개발팀원의 수준이 높지 않아도되 중소형 프로젝트에 적합하다.</li>
+</ul>
+</li>
+<li>단점<ul>
+<li>웹어플리케이션이 복잡해 질수록 유지 보수가 힘들어진다.</li>
+<li>완벽히 분리되지 않아 디자이너와 개발자가 원활히 의사소통 되지 않으면 충돌이 발생한다.</li>
+</ul>
+</li>
+</ul>
+<h3 id="모델2"><a href="#모델2" class="headerlink" title="모델2"></a>모델2</h3><hr>
+<p><img src="images/model2.png" alt="모델2"></p>
+<ul>
+<li>사용자 요청에 대하여 Controller는 Model에게 데이터 조회, 비즈니스 로직의 처리를 요청하고 Model로 부터 정보를 받아 View에게 전달한다. 최종적으로 View는 정적데이터를 구성하여 사용자에게 전달한다.</li>
+<li>장점<ul>
+<li>효과적으로 분리되어 구성된다면 개발자와 디자이너의 작업이 분리되어 역할과 책임 구분이 명확해진다.</li>
+<li>로직과 디자인 개발의 분리로 인해 웹어플리케이션이 구조화되어 유지보수 및 확장이 용이해진다.</li>
+</ul>
+</li>
+<li>단점<ul>
+<li>구조화를 위해 개발의 복잡도가 증가함에 따라 개발기간도 증가한다.</li>
+<li>개발팀원이 MVC구조에 대한 높은 수준의 이해가 요구된다.</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
             
-글자 서식
-
-&lt;__문자__&gt; 강조
-&lt;_문자_&gt; 기울림
-&lt;~~문자~~&gt; 취소
-
-
-수식
-
-윗 첨자와 아래 첨자
-&lt;sup&gt; 윗 첨자sup
-&lt;sub&gt; 아래 첨자sub
-
-
-사선
-
-
-그림 삽입
-
-! [] (images/image.png) (링크)
 
 
 
+    <a data-url="https://youngi08.github.io/2017/11/27/web-jsp-model-and-mvc/" data-id="cjahs5p4y001wdowrv9uztlvk" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
 
-        </p>
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
-
+    </section>
 
 
                         </div>
                     </section>
                     <aside id="sidebar">
     <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/11/24/web-server-side/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Web | Server-Side 처리 과정</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -345,11 +453,13 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'https://youngi08.github.io/2017/11/27/web-jsp-model-and-mvc/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
