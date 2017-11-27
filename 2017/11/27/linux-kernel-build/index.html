@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Hello">
 <meta property="og:description" content="스케줄러, 파일시스템, 메모리 관리자, 네트워크 시스템 등의 수많은 서브 시스템들로 이우러진 커널은 빌딩(building)과정을 통해 zImage(bzImage)라는 부팅 가능한 단일 바이너리 파일로 만들어짐.  커널 빌딩 과정  커널 초기화 make distclean, mrproper   커널 설정 kbuild make menuconfig, gconfi">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-27T06:43:33.564Z">
+<meta property="og:updated_time" content="2017-11-27T07:18:07.239Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="커널 | 커널 빌딩 시스템">
 <meta name="twitter:description" content="스케줄러, 파일시스템, 메모리 관리자, 네트워크 시스템 등의 수많은 서브 시스템들로 이우러진 커널은 빌딩(building)과정을 통해 zImage(bzImage)라는 부팅 가능한 단일 바이너리 파일로 만들어짐.  커널 빌딩 과정  커널 초기화 make distclean, mrproper   커널 설정 kbuild make menuconfig, gconfi">
@@ -167,10 +167,10 @@
         
         <div class="article-entry" itemprop="articleBody">
             <ul>
-<li><p>스케줄러, 파일시스템, 메모리 관리자, 네트워크 시스템 등의 수많은 서브 시스템들로 이우러진 커널은 빌딩(building)과정을 통해 zImage(bzImage)라는 부팅 가능한 단일 바이너리 파일로 만들어짐.</p>
-</li>
-<li><p>커널 빌딩 과정</p>
-</li>
+<li>스케줄러, 파일시스템, 메모리 관리자, 네트워크 시스템 등의 수많은 서브 시스템들로 이우러진 커널은 빌딩(building)과정을 통해 zImage(bzImage)라는 부팅 가능한 단일 바이너리 파일로 만들어짐.</li>
+</ul>
+<h3 id="커널-빌딩-과정"><a href="#커널-빌딩-과정" class="headerlink" title="커널 빌딩 과정"></a>커널 빌딩 과정</h3><hr>
+<ul>
 <li>커널 초기화<ul>
 <li>make distclean, mrproper</li>
 </ul>
@@ -185,13 +185,13 @@
 <li>make all, zImage, modules</li>
 </ul>
 </li>
-<li><p>커널 설치</p>
-<ul>
+<li>커널 설치<ul>
 <li>make install, modules_install</li>
 </ul>
 </li>
-<li><p>커널 초기화</p>
-</li>
+</ul>
+<h3 id="커널-초기화"><a href="#커널-초기화" class="headerlink" title="커널 초기화"></a>커널 초기화</h3><hr>
+<ul>
 <li>tar.gz로 압축된 커널 소스를 압축 해제하면 커널 소스 트리 생성 -&gt; 커널 초기 상태</li>
 <li>maeke distclean, mrproper 명령어로 초기 상태로 되돌 릴 수 있음</li>
 <li>mrproper: “.config” 파일을 비롯하여 커널 컴파일 및 링킹을 위해 생성된 여러 가지 설정 파일들만을 지우도록 함</li>
@@ -207,15 +207,17 @@
 <li>결과로 자신만의 커널을 구성학디 위해 필요한 커널 설정 목록인 “.config” 생성</li>
 <li>“.config” : CONFIG_XXX라는 변수 값에 y,n,m 3개 상태로 설정된 목록으로 이러한 형태의 커널 설정 시스템을 kconfig라 함<ul>
 <li>y: 해당 바이너리가 vmlinux에 함께 링킹</li>
-<li>m: vmlinux와는 링킹이 이루어지지 않지만 모듈로서 컴파일 됨</li>
+<li>m: vmlinux와는 링킹이 이루어지지 않지만 모듈로서 컴파일 됨<h3 id="커널-빌딩"><a href="#커널-빌딩" class="headerlink" title="커널 빌딩"></a>커널 빌딩</h3></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li>커널 빌딩</li>
-<li>kconfig를 이용한 커널 설정이 모두 완료 되어 “.config”파일이 준비 되면 커널 빌딩 시작할 수 있음</li>
+</ul>
+<hr>
+<ul>
+<li>kconfig를 이용한 커널 설정이 모두 완료되어 “.config”파일이 준비 되면 커널 빌딩 시작할 수 있음</li>
 <li>커널 빌딩이란 커널을 컴파일 하고 바이너리들을 링킹하여 단일 바이너리 파일인 zImage를 생성하는 일련의 과정을 말함</li>
 <li>vmliunux := head.o init.o init/ kernel/ mm/ fs/ ipc/ security/ crypto/ block/ usr/ lib/ drivers/ sound/ firmware/ net<ul>
 <li>위의 순서대로 링킹 되며 이를 통해서 vmlinux 바이너리 이미지 생성</li>
@@ -236,13 +238,13 @@
 <li>이렇게 압축된 zImage를 통해 커널 메모리 적재 및 실행 빠르게 진행</li>
 </ul>
 </li>
-<li>이러한 과정은 arch/arm/Makefile을 통해 이루어짐</li>
+<li>이러한 과정은 arch/arm/Makefile을 통해 이루어짐<h3 id="커널-설치"><a href="#커널-설치" class="headerlink" title="커널 설치"></a>커널 설치</h3></li>
 </ul>
 </li>
-<li>커널 설치<ul>
+</ul>
+<hr>
+<ul>
 <li>위의 과정을 거쳐 생성된 커널 이미지를 적절한 곳에 위치시키기 위해 install.sh를 통해 $(INSTALL_PATH)에 해당하는 경로에 커널 이미지를 옮기는 일 수행</li>
-</ul>
-</li>
 </ul>
 
         </div>
